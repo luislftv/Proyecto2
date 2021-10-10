@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<definitions xmlns:wsp="http://www.w3.org/ns/ws-policy" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:tns="http://ws/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsp1_2="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" name="SWPartido" targetNamespace="http://ws/" xmlns="http://schemas.xmlsoap.org/wsdl/">
+  <types>
+    <xsd:schema>
+      <xsd:import schemaLocation="http://localhost:8080/ServidorSOAP/SWPartido?xsd=1" namespace="http://ws/" />
+    </xsd:schema>
+  </types>
+  <message name="crearPartido">
+    <part name="parameters" element="tns:crearPartido" />
+  </message>
+  <message name="crearPartidoResponse">
+    <part name="parameters" element="tns:crearPartidoResponse" />
+  </message>
+  <message name="listarPorId">
+    <part name="parameters" element="tns:listarPorId" />
+  </message>
+  <message name="listarPorIdResponse">
+    <part name="parameters" element="tns:listarPorIdResponse" />
+  </message>
+  <message name="hello">
+    <part name="parameters" element="tns:hello" />
+  </message>
+  <message name="helloResponse">
+    <part name="parameters" element="tns:helloResponse" />
+  </message>
+  <message name="eliminarPartido">
+    <part name="parameters" element="tns:eliminarPartido" />
+  </message>
+  <message name="eliminarPartidoResponse">
+    <part name="parameters" element="tns:eliminarPartidoResponse" />
+  </message>
+  <message name="actualizarPartido">
+    <part name="parameters" element="tns:actualizarPartido" />
+  </message>
+  <message name="actualizarPartidoResponse">
+    <part name="parameters" element="tns:actualizarPartidoResponse" />
+  </message>
+  <message name="listarTodosLosPartidos">
+    <part name="parameters" element="tns:listarTodosLosPartidos" />
+  </message>
+  <message name="listarTodosLosPartidosResponse">
+    <part name="parameters" element="tns:listarTodosLosPartidosResponse" />
+  </message>
+  <portType name="SWPartido">
+    <operation name="crearPartido">
+      <input wsam:Action="http://ws/SWPartido/crearPartidoRequest" message="tns:crearPartido" />
+      <output wsam:Action="http://ws/SWPartido/crearPartidoResponse" message="tns:crearPartidoResponse" />
+    </operation>
+    <operation name="listarPorId">
+      <input wsam:Action="http://ws/SWPartido/listarPorIdRequest" message="tns:listarPorId" />
+      <output wsam:Action="http://ws/SWPartido/listarPorIdResponse" message="tns:listarPorIdResponse" />
+    </operation>
+    <operation name="hello">
+      <input wsam:Action="http://ws/SWPartido/helloRequest" message="tns:hello" />
+      <output wsam:Action="http://ws/SWPartido/helloResponse" message="tns:helloResponse" />
+    </operation>
+    <operation name="eliminarPartido">
+      <input wsam:Action="http://ws/SWPartido/eliminarPartidoRequest" message="tns:eliminarPartido" />
+      <output wsam:Action="http://ws/SWPartido/eliminarPartidoResponse" message="tns:eliminarPartidoResponse" />
+    </operation>
+    <operation name="actualizarPartido">
+      <input wsam:Action="http://ws/SWPartido/actualizarPartidoRequest" message="tns:actualizarPartido" />
+      <output wsam:Action="http://ws/SWPartido/actualizarPartidoResponse" message="tns:actualizarPartidoResponse" />
+    </operation>
+    <operation name="listarTodosLosPartidos">
+      <input wsam:Action="http://ws/SWPartido/listarTodosLosPartidosRequest" message="tns:listarTodosLosPartidos" />
+      <output wsam:Action="http://ws/SWPartido/listarTodosLosPartidosResponse" message="tns:listarTodosLosPartidosResponse" />
+    </operation>
+  </portType>
+  <binding name="SWPartidoPortBinding" type="tns:SWPartido">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <operation name="crearPartido">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="listarPorId">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="hello">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="eliminarPartido">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="actualizarPartido">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="listarTodosLosPartidos">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+  </binding>
+  <service name="SWPartido">
+    <port name="SWPartidoPort" binding="tns:SWPartidoPortBinding">
+      <soap:address location="http://localhost:8080/ServidorSOAP/SWPartido" />
+    </port>
+  </service>
+</definitions>

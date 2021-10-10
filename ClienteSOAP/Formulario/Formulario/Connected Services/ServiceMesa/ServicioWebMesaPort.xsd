@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xsd:schema xmlns:ns0="http://serviciosWeb/" targetNamespace="http://serviciosWeb/" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <xsd:complexType name="actualizarMesa">
+    <xsd:sequence>
+      <xsd:element minOccurs="0" name="arg0" type="ns0:mesa" />
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="actualizarMesaResponse">
+    <xsd:sequence>
+      <xsd:element minOccurs="0" name="return" type="xsd:int" />
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="buscarMesa">
+    <xsd:sequence>
+      <xsd:element minOccurs="0" name="arg0" type="ns0:mesa" />
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="buscarMesaResponse">
+    <xsd:sequence>
+      <xsd:element minOccurs="0" name="return" type="ns0:mesa" />
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="crearMesa">
+    <xsd:sequence>
+      <xsd:element minOccurs="0" name="arg0" type="ns0:mesa" />
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="crearMesaResponse">
+    <xsd:sequence>
+      <xsd:element minOccurs="0" name="return" type="xsd:int" />
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="eliminarMesa">
+    <xsd:sequence>
+      <xsd:element minOccurs="0" name="arg0" type="ns0:mesa" />
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="eliminarMesaResponse">
+    <xsd:sequence>
+      <xsd:element minOccurs="0" name="return" type="xsd:int" />
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="listarMesas" />
+  <xsd:complexType name="listarMesasResponse">
+    <xsd:sequence>
+      <xsd:element minOccurs="0" maxOccurs="unbounded" name="return" type="ns0:mesa" />
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="mesa">
+    <xsd:sequence>
+      <xsd:element name="id_mesa" type="xsd:int" />
+      <xsd:element minOccurs="0" name="localidad" type="xsd:string" />
+      <xsd:element minOccurs="0" name="nombre_lugar" type="xsd:string" />
+      <xsd:element minOccurs="0" maxOccurs="unbounded" name="partidoList2" nillable="true" type="ns0:partido" />
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="partido">
+    <xsd:sequence>
+      <xsd:element minOccurs="0" name="fecha_programada" type="xsd:dateTime" />
+      <xsd:element name="ganador" type="xsd:int" />
+      <xsd:element minOccurs="0" name="hora_fin" type="xsd:dateTime" />
+      <xsd:element minOccurs="0" name="hora_inicio" type="xsd:dateTime" />
+      <xsd:element minOccurs="0" name="mesa" type="ns0:mesa" />
+      <xsd:element minOccurs="0" name="participante" type="ns0:participante" />
+      <xsd:element minOccurs="0" name="participante1" type="ns0:participante" />
+      <xsd:element name="ronda" type="xsd:int" />
+      <xsd:element minOccurs="0" name="torneo" type="xsd:string" />
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="participante">
+    <xsd:sequence>
+      <xsd:element minOccurs="0" name="apodo" type="xsd:string" />
+      <xsd:element minOccurs="0" name="fecha_caducidad" type="xsd:dateTime" />
+      <xsd:element minOccurs="0" name="fecha_inscripcion" type="xsd:dateTime" />
+      <xsd:element name="id" type="xsd:int" />
+      <xsd:element minOccurs="0" maxOccurs="unbounded" name="partidoList" nillable="true" type="ns0:partido" />
+      <xsd:element minOccurs="0" maxOccurs="unbounded" name="partidoList1" nillable="true" type="ns0:partido" />
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:element name="actualizarMesa" type="ns0:actualizarMesa" />
+  <xsd:element name="actualizarMesaResponse" type="ns0:actualizarMesaResponse" />
+  <xsd:element name="buscarMesa" type="ns0:buscarMesa" />
+  <xsd:element name="buscarMesaResponse" type="ns0:buscarMesaResponse" />
+  <xsd:element name="crearMesa" type="ns0:crearMesa" />
+  <xsd:element name="crearMesaResponse" type="ns0:crearMesaResponse" />
+  <xsd:element name="eliminarMesa" type="ns0:eliminarMesa" />
+  <xsd:element name="eliminarMesaResponse" type="ns0:eliminarMesaResponse" />
+  <xsd:element name="listarMesas" type="ns0:listarMesas" />
+  <xsd:element name="listarMesasResponse" type="ns0:listarMesasResponse" />
+</xsd:schema>

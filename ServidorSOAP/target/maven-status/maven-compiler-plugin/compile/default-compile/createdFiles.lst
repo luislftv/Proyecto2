@@ -1,0 +1,17 @@
+ws\SWmesa.class
+model\Partido.class
+model\PartidoPK.class
+com\mycompany\servidorsoap\JAXRSConfiguration.class
+model\Partido_.class
+model\Participante.class
+repository\JPAPartido.class
+services\ServiceMesa.class
+model\Mesa.class
+model\Participante_.class
+repository\JPAParticipante.class
+com\mycompany\servidorsoap\resources\JavaEE8Resource.class
+services\ServiceParticipante.class
+repository\JPAMesa.class
+model\Mesa_.class
+services\ServicePartido.class
+model\PartidoPK_.class
