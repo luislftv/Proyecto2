@@ -1,0 +1,31 @@
+{
+    "nombreApp" : "cliente2_soap_flutter",
+    "rutas" : [
+        {
+            "ruta" : "AdicionarP",
+            "icon" : "Adicionar",
+            "texto": "Adicionar"
+        },
+        {
+            "ruta" : "EliminarP",
+            "icon" : "Eliminar",
+            "texto": "Eliminar"
+        },
+        {
+            "ruta" : "ActualizarP",
+            "icon" : "Actualizar",
+            "texto": "Actualizar"
+        },
+        {
+            "ruta" : "ListarP",
+            "icon" : "Listar",
+            "texto": "Listar"
+        },
+        {
+            "ruta" : "ConsultarP",
+            "icon" : "Consultar",
+            "texto": "Consultar"
+        }
+
+    ]
+}

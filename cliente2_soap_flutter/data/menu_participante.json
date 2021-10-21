@@ -1,0 +1,36 @@
+{
+    "nombreApp" : "cliente2_soap_flutter",
+    "rutas" : [
+        {
+            "ruta" : "Adicionar",
+            "icon" : "Adicionar",
+            "texto": "Adicionar"
+        },
+        {
+            "ruta" : "Eliminar",
+            "icon" : "Eliminar",
+            "texto": "Eliminar"
+        },
+        {
+            "ruta" : "Actualizar",
+            "icon" : "Actualizar",
+            "texto": "Actualizar"
+        },
+        {
+            "ruta" : "Listar",
+            "icon" : "Listar",
+            "texto": "Listar"
+        },
+        {
+            "ruta" : "Consultar",
+            "icon" : "Consultar",
+            "texto": "Consultar"
+        },
+        {
+            "ruta" : "Gráfico",
+            "icon" : "Gráfico",
+            "texto": "Gráfico"
+        }
+
+    ]
+}
