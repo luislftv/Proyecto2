@@ -64,7 +64,7 @@ namespace Formulario
 
             try
             {
-                ServiceMesa.ServicioWebMesaClient servicio = new ServiceMesa.ServicioWebMesaClient();
+                ServiceMesa.SWmesaClient servicio = new ServiceMesa.SWmesaClient();
 
 
 
@@ -82,9 +82,9 @@ namespace Formulario
                 {
                     DataRow row = dt.NewRow();
 
-                    row["Id Mesa"] = filtrar[i].id_mesa;
+                    row["Id Mesa"] = filtrar[i].idMesa;
                     row["Localidad"] = filtrar[i].localidad;
-                    row["Nombre Lugar"] = filtrar[i].nombre_lugar;
+                    row["Nombre Lugar"] = filtrar[i].idMesa;
 
                     dt.Rows.Add(row);
                 }

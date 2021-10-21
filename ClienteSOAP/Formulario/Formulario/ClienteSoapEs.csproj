@@ -193,28 +193,16 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <None Include="Connected Services\ServiceMesa\Formulario.ServiceMesa.actualizarMesaResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Include="Connected Services\ServiceMesa\Formulario.ServiceMesa.buscarMesaResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Include="Connected Services\ServiceMesa\Formulario.ServiceMesa.crearMesaResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Include="Connected Services\ServiceMesa\Formulario.ServiceMesa.eliminarMesaResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
     <None Include="Connected Services\ServiceMesa\Formulario.ServiceMesa.listarMesasResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Connected Services\ServiceMesa\Formulario.ServiceMesa.mesa.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
-    <None Include="Connected Services\ServiceMesa\ServicioWebMesaPort.xsd">
+    <None Include="Connected Services\ServiceMesa\SWmesa.wsdl" />
+    <None Include="Connected Services\ServiceMesa\SWmesa.xsd">
       <SubType>Designer</SubType>
     </None>
-    <None Include="Connected Services\ServiceMesa\ServicioWebMesaServiceSW.wsdl" />
     <None Include="Connected Services\SWParticipante\Formulario.SWParticipante.actualizarParticipanteResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>

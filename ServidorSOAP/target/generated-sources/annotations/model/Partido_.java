@@ -8,7 +8,7 @@ import model.Mesa;
 import model.Participante;
 import model.PartidoPK;
 
-@Generated(value="EclipseLink-2.7.7.v20200504-rNA", date="2021-10-09T08:14:39")
+@Generated(value="EclipseLink-2.7.7.v20200504-rNA", date="2021-10-21T14:06:04")
 @StaticMetamodel(Partido.class)
 public class Partido_ { 
 

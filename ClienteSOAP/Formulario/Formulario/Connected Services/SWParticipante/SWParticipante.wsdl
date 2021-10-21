@@ -5,17 +5,29 @@
       <xsd:import schemaLocation="http://localhost:8080/ServidorSOAP/SWParticipante?xsd=1" namespace="http://ws/" />
     </xsd:schema>
   </types>
+  <message name="Estadisticas">
+    <part name="parameters" element="tns:Estadisticas" />
+  </message>
+  <message name="EstadisticasResponse">
+    <part name="parameters" element="tns:EstadisticasResponse" />
+  </message>
   <message name="hello">
     <part name="parameters" element="tns:hello" />
   </message>
   <message name="helloResponse">
     <part name="parameters" element="tns:helloResponse" />
   </message>
-  <message name="Estadisticas">
-    <part name="parameters" element="tns:Estadisticas" />
+  <message name="filtrarParticipantePorApodo">
+    <part name="parameters" element="tns:filtrarParticipantePorApodo" />
   </message>
-  <message name="EstadisticasResponse">
-    <part name="parameters" element="tns:EstadisticasResponse" />
+  <message name="filtrarParticipantePorApodoResponse">
+    <part name="parameters" element="tns:filtrarParticipantePorApodoResponse" />
+  </message>
+  <message name="listarPartidosDeUnParticipante">
+    <part name="parameters" element="tns:listarPartidosDeUnParticipante" />
+  </message>
+  <message name="listarPartidosDeUnParticipanteResponse">
+    <part name="parameters" element="tns:listarPartidosDeUnParticipanteResponse" />
   </message>
   <message name="crearParticipante">
     <part name="parameters" element="tns:crearParticipante" />
@@ -35,11 +47,11 @@
   <message name="actualizarParticipanteResponse">
     <part name="parameters" element="tns:actualizarParticipanteResponse" />
   </message>
-  <message name="filtrarParticipantePorApodo">
-    <part name="parameters" element="tns:filtrarParticipantePorApodo" />
+  <message name="buscarParticipante">
+    <part name="parameters" element="tns:buscarParticipante" />
   </message>
-  <message name="filtrarParticipantePorApodoResponse">
-    <part name="parameters" element="tns:filtrarParticipantePorApodoResponse" />
+  <message name="buscarParticipanteResponse">
+    <part name="parameters" element="tns:buscarParticipanteResponse" />
   </message>
   <message name="eliminarParticipante">
     <part name="parameters" element="tns:eliminarParticipante" />
@@ -47,26 +59,22 @@
   <message name="eliminarParticipanteResponse">
     <part name="parameters" element="tns:eliminarParticipanteResponse" />
   </message>
-  <message name="buscarParticipante">
-    <part name="parameters" element="tns:buscarParticipante" />
-  </message>
-  <message name="buscarParticipanteResponse">
-    <part name="parameters" element="tns:buscarParticipanteResponse" />
-  </message>
-  <message name="listarPartidosDeUnParticipante">
-    <part name="parameters" element="tns:listarPartidosDeUnParticipante" />
-  </message>
-  <message name="listarPartidosDeUnParticipanteResponse">
-    <part name="parameters" element="tns:listarPartidosDeUnParticipanteResponse" />
-  </message>
   <portType name="SWParticipante">
+    <operation name="Estadisticas">
+      <input wsam:Action="http://ws/SWParticipante/EstadisticasRequest" message="tns:Estadisticas" />
+      <output wsam:Action="http://ws/SWParticipante/EstadisticasResponse" message="tns:EstadisticasResponse" />
+    </operation>
     <operation name="hello">
       <input wsam:Action="http://ws/SWParticipante/helloRequest" message="tns:hello" />
       <output wsam:Action="http://ws/SWParticipante/helloResponse" message="tns:helloResponse" />
     </operation>
-    <operation name="Estadisticas">
-      <input wsam:Action="http://ws/SWParticipante/EstadisticasRequest" message="tns:Estadisticas" />
-      <output wsam:Action="http://ws/SWParticipante/EstadisticasResponse" message="tns:EstadisticasResponse" />
+    <operation name="filtrarParticipantePorApodo">
+      <input wsam:Action="http://ws/SWParticipante/filtrarParticipantePorApodoRequest" message="tns:filtrarParticipantePorApodo" />
+      <output wsam:Action="http://ws/SWParticipante/filtrarParticipantePorApodoResponse" message="tns:filtrarParticipantePorApodoResponse" />
+    </operation>
+    <operation name="listarPartidosDeUnParticipante">
+      <input wsam:Action="http://ws/SWParticipante/listarPartidosDeUnParticipanteRequest" message="tns:listarPartidosDeUnParticipante" />
+      <output wsam:Action="http://ws/SWParticipante/listarPartidosDeUnParticipanteResponse" message="tns:listarPartidosDeUnParticipanteResponse" />
     </operation>
     <operation name="crearParticipante">
       <input wsam:Action="http://ws/SWParticipante/crearParticipanteRequest" message="tns:crearParticipante" />
@@ -80,25 +88,26 @@
       <input wsam:Action="http://ws/SWParticipante/actualizarParticipanteRequest" message="tns:actualizarParticipante" />
       <output wsam:Action="http://ws/SWParticipante/actualizarParticipanteResponse" message="tns:actualizarParticipanteResponse" />
     </operation>
-    <operation name="filtrarParticipantePorApodo">
-      <input wsam:Action="http://ws/SWParticipante/filtrarParticipantePorApodoRequest" message="tns:filtrarParticipantePorApodo" />
-      <output wsam:Action="http://ws/SWParticipante/filtrarParticipantePorApodoResponse" message="tns:filtrarParticipantePorApodoResponse" />
+    <operation name="buscarParticipante">
+      <input wsam:Action="http://ws/SWParticipante/buscarParticipanteRequest" message="tns:buscarParticipante" />
+      <output wsam:Action="http://ws/SWParticipante/buscarParticipanteResponse" message="tns:buscarParticipanteResponse" />
     </operation>
     <operation name="eliminarParticipante">
       <input wsam:Action="http://ws/SWParticipante/eliminarParticipanteRequest" message="tns:eliminarParticipante" />
       <output wsam:Action="http://ws/SWParticipante/eliminarParticipanteResponse" message="tns:eliminarParticipanteResponse" />
     </operation>
-    <operation name="buscarParticipante">
-      <input wsam:Action="http://ws/SWParticipante/buscarParticipanteRequest" message="tns:buscarParticipante" />
-      <output wsam:Action="http://ws/SWParticipante/buscarParticipanteResponse" message="tns:buscarParticipanteResponse" />
-    </operation>
-    <operation name="listarPartidosDeUnParticipante">
-      <input wsam:Action="http://ws/SWParticipante/listarPartidosDeUnParticipanteRequest" message="tns:listarPartidosDeUnParticipante" />
-      <output wsam:Action="http://ws/SWParticipante/listarPartidosDeUnParticipanteResponse" message="tns:listarPartidosDeUnParticipanteResponse" />
-    </operation>
   </portType>
   <binding name="SWParticipantePortBinding" type="tns:SWParticipante">
     <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <operation name="Estadisticas">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
     <operation name="hello">
       <soap:operation soapAction="" />
       <input>
@@ -108,7 +117,16 @@
         <soap:body use="literal" />
       </output>
     </operation>
-    <operation name="Estadisticas">
+    <operation name="filtrarParticipantePorApodo">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="listarPartidosDeUnParticipante">
       <soap:operation soapAction="" />
       <input>
         <soap:body use="literal" />
@@ -144,24 +162,6 @@
         <soap:body use="literal" />
       </output>
     </operation>
-    <operation name="filtrarParticipantePorApodo">
-      <soap:operation soapAction="" />
-      <input>
-        <soap:body use="literal" />
-      </input>
-      <output>
-        <soap:body use="literal" />
-      </output>
-    </operation>
-    <operation name="eliminarParticipante">
-      <soap:operation soapAction="" />
-      <input>
-        <soap:body use="literal" />
-      </input>
-      <output>
-        <soap:body use="literal" />
-      </output>
-    </operation>
     <operation name="buscarParticipante">
       <soap:operation soapAction="" />
       <input>
@@ -171,7 +171,7 @@
         <soap:body use="literal" />
       </output>
     </operation>
-    <operation name="listarPartidosDeUnParticipante">
+    <operation name="eliminarParticipante">
       <soap:operation soapAction="" />
       <input>
         <soap:body use="literal" />

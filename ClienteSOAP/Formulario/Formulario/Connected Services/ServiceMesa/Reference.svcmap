@@ -19,11 +19,11 @@
     <ServiceContractMappings />
   </ClientOptions>
   <MetadataSources>
-    <MetadataSource Address="http://localhost:7101/Servidor-Servidor-context-root/ServicioWebMesaPort?WSDL" Protocol="http" SourceId="1" />
+    <MetadataSource Address="http://localhost:8080/ServidorSOAP/SWmesa?WSDL" Protocol="http" SourceId="1" />
   </MetadataSources>
   <Metadata>
-    <MetadataFile FileName="ServicioWebMesaServiceSW.wsdl" MetadataType="Wsdl" ID="2b33b9e4-8145-4fa0-8415-7d82d1bfd04e" SourceId="1" SourceUrl="http://localhost:7101/Servidor-Servidor-context-root/ServicioWebMesaPort?WSDL" />
-    <MetadataFile FileName="ServicioWebMesaPort.xsd" MetadataType="Schema" ID="286beb27-8765-4944-a8d6-f78479edad8a" SourceId="1" SourceUrl="http://localhost:7101/Servidor-Servidor-context-root/ServicioWebMesaPort?xsd=1" />
+    <MetadataFile FileName="SWmesa.wsdl" MetadataType="Wsdl" ID="88f90223-7b62-4389-9244-6c6d27b8df8e" SourceId="1" SourceUrl="http://localhost:8080/ServidorSOAP/SWmesa?WSDL" />
+    <MetadataFile FileName="SWmesa.xsd" MetadataType="Schema" ID="deacd2ca-951c-4e61-8d30-a8081332a14b" SourceId="1" SourceUrl="http://localhost:8080/ServidorSOAP/SWmesa?xsd=1" />
   </Metadata>
   <Extensions>
     <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />

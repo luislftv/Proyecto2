@@ -2,6 +2,7 @@ ws\SWmesa.class
 model\Partido.class
 model\PartidoPK.class
 com\mycompany\servidorsoap\JAXRSConfiguration.class
+ws\SWPartido.class
 model\Partido_.class
 model\Participante.class
 repository\JPAPartido.class
@@ -12,6 +13,8 @@ repository\JPAParticipante.class
 com\mycompany\servidorsoap\resources\JavaEE8Resource.class
 services\ServiceParticipante.class
 repository\JPAMesa.class
+ws\SWParticipante.class
 model\Mesa_.class
 services\ServicePartido.class
 model\PartidoPK_.class
+repository\Connect.class

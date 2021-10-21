@@ -16,6 +16,15 @@ namespace Formulario.SWParticipante {
     public interface SWParticipante {
         
         // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
+        [System.ServiceModel.OperationContractAttribute(Action="http://ws/SWParticipante/EstadisticasRequest", ReplyAction="http://ws/SWParticipante/EstadisticasResponse")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        Formulario.SWParticipante.EstadisticasResponse Estadisticas(Formulario.SWParticipante.EstadisticasRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://ws/SWParticipante/EstadisticasRequest", ReplyAction="http://ws/SWParticipante/EstadisticasResponse")]
+        System.Threading.Tasks.Task<Formulario.SWParticipante.EstadisticasResponse> EstadisticasAsync(Formulario.SWParticipante.EstadisticasRequest request);
+        
+        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
         [System.ServiceModel.OperationContractAttribute(Action="http://ws/SWParticipante/helloRequest", ReplyAction="http://ws/SWParticipante/helloResponse")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
         [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
@@ -25,13 +34,22 @@ namespace Formulario.SWParticipante {
         System.Threading.Tasks.Task<Formulario.SWParticipante.helloResponse> helloAsync(Formulario.SWParticipante.helloRequest request);
         
         // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://ws/SWParticipante/EstadisticasRequest", ReplyAction="http://ws/SWParticipante/EstadisticasResponse")]
+        [System.ServiceModel.OperationContractAttribute(Action="http://ws/SWParticipante/filtrarParticipantePorApodoRequest", ReplyAction="http://ws/SWParticipante/filtrarParticipantePorApodoResponse")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
         [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        Formulario.SWParticipante.EstadisticasResponse Estadisticas(Formulario.SWParticipante.EstadisticasRequest request);
+        Formulario.SWParticipante.filtrarParticipantePorApodoResponse filtrarParticipantePorApodo(Formulario.SWParticipante.filtrarParticipantePorApodoRequest request);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://ws/SWParticipante/EstadisticasRequest", ReplyAction="http://ws/SWParticipante/EstadisticasResponse")]
-        System.Threading.Tasks.Task<Formulario.SWParticipante.EstadisticasResponse> EstadisticasAsync(Formulario.SWParticipante.EstadisticasRequest request);
+        [System.ServiceModel.OperationContractAttribute(Action="http://ws/SWParticipante/filtrarParticipantePorApodoRequest", ReplyAction="http://ws/SWParticipante/filtrarParticipantePorApodoResponse")]
+        System.Threading.Tasks.Task<Formulario.SWParticipante.filtrarParticipantePorApodoResponse> filtrarParticipantePorApodoAsync(Formulario.SWParticipante.filtrarParticipantePorApodoRequest request);
+        
+        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
+        [System.ServiceModel.OperationContractAttribute(Action="http://ws/SWParticipante/listarPartidosDeUnParticipanteRequest", ReplyAction="http://ws/SWParticipante/listarPartidosDeUnParticipanteResponse")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        Formulario.SWParticipante.listarPartidosDeUnParticipanteResponse listarPartidosDeUnParticipante(Formulario.SWParticipante.listarPartidosDeUnParticipanteRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://ws/SWParticipante/listarPartidosDeUnParticipanteRequest", ReplyAction="http://ws/SWParticipante/listarPartidosDeUnParticipanteResponse")]
+        System.Threading.Tasks.Task<Formulario.SWParticipante.listarPartidosDeUnParticipanteResponse> listarPartidosDeUnParticipanteAsync(Formulario.SWParticipante.listarPartidosDeUnParticipanteRequest request);
         
         // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
         [System.ServiceModel.OperationContractAttribute(Action="http://ws/SWParticipante/crearParticipanteRequest", ReplyAction="http://ws/SWParticipante/crearParticipanteResponse")]
@@ -61,24 +79,6 @@ namespace Formulario.SWParticipante {
         System.Threading.Tasks.Task<Formulario.SWParticipante.actualizarParticipanteResponse> actualizarParticipanteAsync(Formulario.SWParticipante.actualizarParticipanteRequest request);
         
         // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://ws/SWParticipante/filtrarParticipantePorApodoRequest", ReplyAction="http://ws/SWParticipante/filtrarParticipantePorApodoResponse")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        Formulario.SWParticipante.filtrarParticipantePorApodoResponse filtrarParticipantePorApodo(Formulario.SWParticipante.filtrarParticipantePorApodoRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://ws/SWParticipante/filtrarParticipantePorApodoRequest", ReplyAction="http://ws/SWParticipante/filtrarParticipantePorApodoResponse")]
-        System.Threading.Tasks.Task<Formulario.SWParticipante.filtrarParticipantePorApodoResponse> filtrarParticipantePorApodoAsync(Formulario.SWParticipante.filtrarParticipantePorApodoRequest request);
-        
-        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://ws/SWParticipante/eliminarParticipanteRequest", ReplyAction="http://ws/SWParticipante/eliminarParticipanteResponse")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        Formulario.SWParticipante.eliminarParticipanteResponse eliminarParticipante(Formulario.SWParticipante.eliminarParticipanteRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://ws/SWParticipante/eliminarParticipanteRequest", ReplyAction="http://ws/SWParticipante/eliminarParticipanteResponse")]
-        System.Threading.Tasks.Task<Formulario.SWParticipante.eliminarParticipanteResponse> eliminarParticipanteAsync(Formulario.SWParticipante.eliminarParticipanteRequest request);
-        
-        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
         [System.ServiceModel.OperationContractAttribute(Action="http://ws/SWParticipante/buscarParticipanteRequest", ReplyAction="http://ws/SWParticipante/buscarParticipanteResponse")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
         [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
@@ -88,49 +88,13 @@ namespace Formulario.SWParticipante {
         System.Threading.Tasks.Task<Formulario.SWParticipante.buscarParticipanteResponse> buscarParticipanteAsync(Formulario.SWParticipante.buscarParticipanteRequest request);
         
         // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://ws/SWParticipante/listarPartidosDeUnParticipanteRequest", ReplyAction="http://ws/SWParticipante/listarPartidosDeUnParticipanteResponse")]
+        [System.ServiceModel.OperationContractAttribute(Action="http://ws/SWParticipante/eliminarParticipanteRequest", ReplyAction="http://ws/SWParticipante/eliminarParticipanteResponse")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
         [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        Formulario.SWParticipante.listarPartidosDeUnParticipanteResponse listarPartidosDeUnParticipante(Formulario.SWParticipante.listarPartidosDeUnParticipanteRequest request);
+        Formulario.SWParticipante.eliminarParticipanteResponse eliminarParticipante(Formulario.SWParticipante.eliminarParticipanteRequest request);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://ws/SWParticipante/listarPartidosDeUnParticipanteRequest", ReplyAction="http://ws/SWParticipante/listarPartidosDeUnParticipanteResponse")]
-        System.Threading.Tasks.Task<Formulario.SWParticipante.listarPartidosDeUnParticipanteResponse> listarPartidosDeUnParticipanteAsync(Formulario.SWParticipante.listarPartidosDeUnParticipanteRequest request);
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="hello", WrapperNamespace="http://ws/", IsWrapped=true)]
-    public partial class helloRequest {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public string name;
-        
-        public helloRequest() {
-        }
-        
-        public helloRequest(string name) {
-            this.name = name;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="helloResponse", WrapperNamespace="http://ws/", IsWrapped=true)]
-    public partial class helloResponse {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public string @return;
-        
-        public helloResponse() {
-        }
-        
-        public helloResponse(string @return) {
-            this.@return = @return;
-        }
+        [System.ServiceModel.OperationContractAttribute(Action="http://ws/SWParticipante/eliminarParticipanteRequest", ReplyAction="http://ws/SWParticipante/eliminarParticipanteResponse")]
+        System.Threading.Tasks.Task<Formulario.SWParticipante.eliminarParticipanteResponse> eliminarParticipanteAsync(Formulario.SWParticipante.eliminarParticipanteRequest request);
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -172,56 +136,41 @@ namespace Formulario.SWParticipante {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="crearParticipante", WrapperNamespace="http://ws/", IsWrapped=true)]
-    public partial class crearParticipanteRequest {
+    [System.ServiceModel.MessageContractAttribute(WrapperName="hello", WrapperNamespace="http://ws/", IsWrapped=true)]
+    public partial class helloRequest {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws/", Order=0)]
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public int arg0;
+        public string name;
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws/", Order=1)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public string arg1;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws/", Order=2)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public System.DateTime arg2;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws/", Order=3)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public System.DateTime arg3;
-        
-        public crearParticipanteRequest() {
+        public helloRequest() {
         }
         
-        public crearParticipanteRequest(int arg0, string arg1, System.DateTime arg2, System.DateTime arg3) {
-            this.arg0 = arg0;
-            this.arg1 = arg1;
-            this.arg2 = arg2;
-            this.arg3 = arg3;
+        public helloRequest(string name) {
+            this.name = name;
         }
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="crearParticipanteResponse", WrapperNamespace="http://ws/", IsWrapped=true)]
-    public partial class crearParticipanteResponse {
+    [System.ServiceModel.MessageContractAttribute(WrapperName="helloResponse", WrapperNamespace="http://ws/", IsWrapped=true)]
+    public partial class helloResponse {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws/", Order=0)]
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public int @return;
+        public string @return;
         
-        public crearParticipanteResponse() {
+        public helloResponse() {
         }
         
-        public crearParticipanteResponse(int @return) {
+        public helloResponse(string @return) {
             this.@return = @return;
         }
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4161.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -337,7 +286,7 @@ namespace Formulario.SWParticipante {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4161.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -397,7 +346,7 @@ namespace Formulario.SWParticipante {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4161.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -471,7 +420,7 @@ namespace Formulario.SWParticipante {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4161.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -673,6 +622,129 @@ namespace Formulario.SWParticipante {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="filtrarParticipantePorApodo", WrapperNamespace="http://ws/", IsWrapped=true)]
+    public partial class filtrarParticipantePorApodoRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public string arg0;
+        
+        public filtrarParticipantePorApodoRequest() {
+        }
+        
+        public filtrarParticipantePorApodoRequest(string arg0) {
+            this.arg0 = arg0;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="filtrarParticipantePorApodoResponse", WrapperNamespace="http://ws/", IsWrapped=true)]
+    public partial class filtrarParticipantePorApodoResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute("return", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public Formulario.SWParticipante.participante[] @return;
+        
+        public filtrarParticipantePorApodoResponse() {
+        }
+        
+        public filtrarParticipantePorApodoResponse(Formulario.SWParticipante.participante[] @return) {
+            this.@return = @return;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="listarPartidosDeUnParticipante", WrapperNamespace="http://ws/", IsWrapped=true)]
+    public partial class listarPartidosDeUnParticipanteRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public int arg0;
+        
+        public listarPartidosDeUnParticipanteRequest() {
+        }
+        
+        public listarPartidosDeUnParticipanteRequest(int arg0) {
+            this.arg0 = arg0;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="listarPartidosDeUnParticipanteResponse", WrapperNamespace="http://ws/", IsWrapped=true)]
+    public partial class listarPartidosDeUnParticipanteResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute("return", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public Formulario.SWParticipante.partido[] @return;
+        
+        public listarPartidosDeUnParticipanteResponse() {
+        }
+        
+        public listarPartidosDeUnParticipanteResponse(Formulario.SWParticipante.partido[] @return) {
+            this.@return = @return;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="crearParticipante", WrapperNamespace="http://ws/", IsWrapped=true)]
+    public partial class crearParticipanteRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public int arg0;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws/", Order=1)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public string arg1;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws/", Order=2)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public System.DateTime arg2;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws/", Order=3)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public System.DateTime arg3;
+        
+        public crearParticipanteRequest() {
+        }
+        
+        public crearParticipanteRequest(int arg0, string arg1, System.DateTime arg2, System.DateTime arg3) {
+            this.arg0 = arg0;
+            this.arg1 = arg1;
+            this.arg2 = arg2;
+            this.arg3 = arg3;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="crearParticipanteResponse", WrapperNamespace="http://ws/", IsWrapped=true)]
+    public partial class crearParticipanteResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public int @return;
+        
+        public crearParticipanteResponse() {
+        }
+        
+        public crearParticipanteResponse(int @return) {
+            this.@return = @return;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
     [System.ServiceModel.MessageContractAttribute(WrapperName="listarParticipantes", WrapperNamespace="http://ws/", IsWrapped=true)]
     public partial class listarParticipantesRequest {
         
@@ -752,17 +824,17 @@ namespace Formulario.SWParticipante {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="filtrarParticipantePorApodo", WrapperNamespace="http://ws/", IsWrapped=true)]
-    public partial class filtrarParticipantePorApodoRequest {
+    [System.ServiceModel.MessageContractAttribute(WrapperName="buscarParticipante", WrapperNamespace="http://ws/", IsWrapped=true)]
+    public partial class buscarParticipanteRequest {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws/", Order=0)]
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public string arg0;
+        public int arg0;
         
-        public filtrarParticipantePorApodoRequest() {
+        public buscarParticipanteRequest() {
         }
         
-        public filtrarParticipantePorApodoRequest(string arg0) {
+        public buscarParticipanteRequest(int arg0) {
             this.arg0 = arg0;
         }
     }
@@ -770,17 +842,17 @@ namespace Formulario.SWParticipante {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="filtrarParticipantePorApodoResponse", WrapperNamespace="http://ws/", IsWrapped=true)]
-    public partial class filtrarParticipantePorApodoResponse {
+    [System.ServiceModel.MessageContractAttribute(WrapperName="buscarParticipanteResponse", WrapperNamespace="http://ws/", IsWrapped=true)]
+    public partial class buscarParticipanteResponse {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute("return", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public Formulario.SWParticipante.participante[] @return;
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public Formulario.SWParticipante.participante @return;
         
-        public filtrarParticipantePorApodoResponse() {
+        public buscarParticipanteResponse() {
         }
         
-        public filtrarParticipantePorApodoResponse(Formulario.SWParticipante.participante[] @return) {
+        public buscarParticipanteResponse(Formulario.SWParticipante.participante @return) {
             this.@return = @return;
         }
     }
@@ -836,78 +908,6 @@ namespace Formulario.SWParticipante {
         }
     }
     
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="buscarParticipante", WrapperNamespace="http://ws/", IsWrapped=true)]
-    public partial class buscarParticipanteRequest {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public int arg0;
-        
-        public buscarParticipanteRequest() {
-        }
-        
-        public buscarParticipanteRequest(int arg0) {
-            this.arg0 = arg0;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="buscarParticipanteResponse", WrapperNamespace="http://ws/", IsWrapped=true)]
-    public partial class buscarParticipanteResponse {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public Formulario.SWParticipante.participante @return;
-        
-        public buscarParticipanteResponse() {
-        }
-        
-        public buscarParticipanteResponse(Formulario.SWParticipante.participante @return) {
-            this.@return = @return;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="listarPartidosDeUnParticipante", WrapperNamespace="http://ws/", IsWrapped=true)]
-    public partial class listarPartidosDeUnParticipanteRequest {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public int arg0;
-        
-        public listarPartidosDeUnParticipanteRequest() {
-        }
-        
-        public listarPartidosDeUnParticipanteRequest(int arg0) {
-            this.arg0 = arg0;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="listarPartidosDeUnParticipanteResponse", WrapperNamespace="http://ws/", IsWrapped=true)]
-    public partial class listarPartidosDeUnParticipanteResponse {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute("return", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public Formulario.SWParticipante.partido[] @return;
-        
-        public listarPartidosDeUnParticipanteResponse() {
-        }
-        
-        public listarPartidosDeUnParticipanteResponse(Formulario.SWParticipante.partido[] @return) {
-            this.@return = @return;
-        }
-    }
-    
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     public interface SWParticipanteChannel : Formulario.SWParticipante.SWParticipante, System.ServiceModel.IClientChannel {
     }
@@ -936,6 +936,29 @@ namespace Formulario.SWParticipante {
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        Formulario.SWParticipante.EstadisticasResponse Formulario.SWParticipante.SWParticipante.Estadisticas(Formulario.SWParticipante.EstadisticasRequest request) {
+            return base.Channel.Estadisticas(request);
+        }
+        
+        public System.Nullable<int>[] Estadisticas(int arg0) {
+            Formulario.SWParticipante.EstadisticasRequest inValue = new Formulario.SWParticipante.EstadisticasRequest();
+            inValue.arg0 = arg0;
+            Formulario.SWParticipante.EstadisticasResponse retVal = ((Formulario.SWParticipante.SWParticipante)(this)).Estadisticas(inValue);
+            return retVal.@return;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<Formulario.SWParticipante.EstadisticasResponse> Formulario.SWParticipante.SWParticipante.EstadisticasAsync(Formulario.SWParticipante.EstadisticasRequest request) {
+            return base.Channel.EstadisticasAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<Formulario.SWParticipante.EstadisticasResponse> EstadisticasAsync(int arg0) {
+            Formulario.SWParticipante.EstadisticasRequest inValue = new Formulario.SWParticipante.EstadisticasRequest();
+            inValue.arg0 = arg0;
+            return ((Formulario.SWParticipante.SWParticipante)(this)).EstadisticasAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
         Formulario.SWParticipante.helloResponse Formulario.SWParticipante.SWParticipante.hello(Formulario.SWParticipante.helloRequest request) {
             return base.Channel.hello(request);
         }
@@ -959,26 +982,49 @@ namespace Formulario.SWParticipante {
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        Formulario.SWParticipante.EstadisticasResponse Formulario.SWParticipante.SWParticipante.Estadisticas(Formulario.SWParticipante.EstadisticasRequest request) {
-            return base.Channel.Estadisticas(request);
+        Formulario.SWParticipante.filtrarParticipantePorApodoResponse Formulario.SWParticipante.SWParticipante.filtrarParticipantePorApodo(Formulario.SWParticipante.filtrarParticipantePorApodoRequest request) {
+            return base.Channel.filtrarParticipantePorApodo(request);
         }
         
-        public System.Nullable<int>[] Estadisticas(int arg0) {
-            Formulario.SWParticipante.EstadisticasRequest inValue = new Formulario.SWParticipante.EstadisticasRequest();
+        public Formulario.SWParticipante.participante[] filtrarParticipantePorApodo(string arg0) {
+            Formulario.SWParticipante.filtrarParticipantePorApodoRequest inValue = new Formulario.SWParticipante.filtrarParticipantePorApodoRequest();
             inValue.arg0 = arg0;
-            Formulario.SWParticipante.EstadisticasResponse retVal = ((Formulario.SWParticipante.SWParticipante)(this)).Estadisticas(inValue);
+            Formulario.SWParticipante.filtrarParticipantePorApodoResponse retVal = ((Formulario.SWParticipante.SWParticipante)(this)).filtrarParticipantePorApodo(inValue);
             return retVal.@return;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<Formulario.SWParticipante.EstadisticasResponse> Formulario.SWParticipante.SWParticipante.EstadisticasAsync(Formulario.SWParticipante.EstadisticasRequest request) {
-            return base.Channel.EstadisticasAsync(request);
+        System.Threading.Tasks.Task<Formulario.SWParticipante.filtrarParticipantePorApodoResponse> Formulario.SWParticipante.SWParticipante.filtrarParticipantePorApodoAsync(Formulario.SWParticipante.filtrarParticipantePorApodoRequest request) {
+            return base.Channel.filtrarParticipantePorApodoAsync(request);
         }
         
-        public System.Threading.Tasks.Task<Formulario.SWParticipante.EstadisticasResponse> EstadisticasAsync(int arg0) {
-            Formulario.SWParticipante.EstadisticasRequest inValue = new Formulario.SWParticipante.EstadisticasRequest();
+        public System.Threading.Tasks.Task<Formulario.SWParticipante.filtrarParticipantePorApodoResponse> filtrarParticipantePorApodoAsync(string arg0) {
+            Formulario.SWParticipante.filtrarParticipantePorApodoRequest inValue = new Formulario.SWParticipante.filtrarParticipantePorApodoRequest();
             inValue.arg0 = arg0;
-            return ((Formulario.SWParticipante.SWParticipante)(this)).EstadisticasAsync(inValue);
+            return ((Formulario.SWParticipante.SWParticipante)(this)).filtrarParticipantePorApodoAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        Formulario.SWParticipante.listarPartidosDeUnParticipanteResponse Formulario.SWParticipante.SWParticipante.listarPartidosDeUnParticipante(Formulario.SWParticipante.listarPartidosDeUnParticipanteRequest request) {
+            return base.Channel.listarPartidosDeUnParticipante(request);
+        }
+        
+        public Formulario.SWParticipante.partido[] listarPartidosDeUnParticipante(int arg0) {
+            Formulario.SWParticipante.listarPartidosDeUnParticipanteRequest inValue = new Formulario.SWParticipante.listarPartidosDeUnParticipanteRequest();
+            inValue.arg0 = arg0;
+            Formulario.SWParticipante.listarPartidosDeUnParticipanteResponse retVal = ((Formulario.SWParticipante.SWParticipante)(this)).listarPartidosDeUnParticipante(inValue);
+            return retVal.@return;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<Formulario.SWParticipante.listarPartidosDeUnParticipanteResponse> Formulario.SWParticipante.SWParticipante.listarPartidosDeUnParticipanteAsync(Formulario.SWParticipante.listarPartidosDeUnParticipanteRequest request) {
+            return base.Channel.listarPartidosDeUnParticipanteAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<Formulario.SWParticipante.listarPartidosDeUnParticipanteResponse> listarPartidosDeUnParticipanteAsync(int arg0) {
+            Formulario.SWParticipante.listarPartidosDeUnParticipanteRequest inValue = new Formulario.SWParticipante.listarPartidosDeUnParticipanteRequest();
+            inValue.arg0 = arg0;
+            return ((Formulario.SWParticipante.SWParticipante)(this)).listarPartidosDeUnParticipanteAsync(inValue);
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
@@ -1061,26 +1107,26 @@ namespace Formulario.SWParticipante {
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        Formulario.SWParticipante.filtrarParticipantePorApodoResponse Formulario.SWParticipante.SWParticipante.filtrarParticipantePorApodo(Formulario.SWParticipante.filtrarParticipantePorApodoRequest request) {
-            return base.Channel.filtrarParticipantePorApodo(request);
+        Formulario.SWParticipante.buscarParticipanteResponse Formulario.SWParticipante.SWParticipante.buscarParticipante(Formulario.SWParticipante.buscarParticipanteRequest request) {
+            return base.Channel.buscarParticipante(request);
         }
         
-        public Formulario.SWParticipante.participante[] filtrarParticipantePorApodo(string arg0) {
-            Formulario.SWParticipante.filtrarParticipantePorApodoRequest inValue = new Formulario.SWParticipante.filtrarParticipantePorApodoRequest();
+        public Formulario.SWParticipante.participante buscarParticipante(int arg0) {
+            Formulario.SWParticipante.buscarParticipanteRequest inValue = new Formulario.SWParticipante.buscarParticipanteRequest();
             inValue.arg0 = arg0;
-            Formulario.SWParticipante.filtrarParticipantePorApodoResponse retVal = ((Formulario.SWParticipante.SWParticipante)(this)).filtrarParticipantePorApodo(inValue);
+            Formulario.SWParticipante.buscarParticipanteResponse retVal = ((Formulario.SWParticipante.SWParticipante)(this)).buscarParticipante(inValue);
             return retVal.@return;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<Formulario.SWParticipante.filtrarParticipantePorApodoResponse> Formulario.SWParticipante.SWParticipante.filtrarParticipantePorApodoAsync(Formulario.SWParticipante.filtrarParticipantePorApodoRequest request) {
-            return base.Channel.filtrarParticipantePorApodoAsync(request);
+        System.Threading.Tasks.Task<Formulario.SWParticipante.buscarParticipanteResponse> Formulario.SWParticipante.SWParticipante.buscarParticipanteAsync(Formulario.SWParticipante.buscarParticipanteRequest request) {
+            return base.Channel.buscarParticipanteAsync(request);
         }
         
-        public System.Threading.Tasks.Task<Formulario.SWParticipante.filtrarParticipantePorApodoResponse> filtrarParticipantePorApodoAsync(string arg0) {
-            Formulario.SWParticipante.filtrarParticipantePorApodoRequest inValue = new Formulario.SWParticipante.filtrarParticipantePorApodoRequest();
+        public System.Threading.Tasks.Task<Formulario.SWParticipante.buscarParticipanteResponse> buscarParticipanteAsync(int arg0) {
+            Formulario.SWParticipante.buscarParticipanteRequest inValue = new Formulario.SWParticipante.buscarParticipanteRequest();
             inValue.arg0 = arg0;
-            return ((Formulario.SWParticipante.SWParticipante)(this)).filtrarParticipantePorApodoAsync(inValue);
+            return ((Formulario.SWParticipante.SWParticipante)(this)).buscarParticipanteAsync(inValue);
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
@@ -1110,52 +1156,6 @@ namespace Formulario.SWParticipante {
             inValue.arg2 = arg2;
             inValue.arg3 = arg3;
             return ((Formulario.SWParticipante.SWParticipante)(this)).eliminarParticipanteAsync(inValue);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        Formulario.SWParticipante.buscarParticipanteResponse Formulario.SWParticipante.SWParticipante.buscarParticipante(Formulario.SWParticipante.buscarParticipanteRequest request) {
-            return base.Channel.buscarParticipante(request);
-        }
-        
-        public Formulario.SWParticipante.participante buscarParticipante(int arg0) {
-            Formulario.SWParticipante.buscarParticipanteRequest inValue = new Formulario.SWParticipante.buscarParticipanteRequest();
-            inValue.arg0 = arg0;
-            Formulario.SWParticipante.buscarParticipanteResponse retVal = ((Formulario.SWParticipante.SWParticipante)(this)).buscarParticipante(inValue);
-            return retVal.@return;
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<Formulario.SWParticipante.buscarParticipanteResponse> Formulario.SWParticipante.SWParticipante.buscarParticipanteAsync(Formulario.SWParticipante.buscarParticipanteRequest request) {
-            return base.Channel.buscarParticipanteAsync(request);
-        }
-        
-        public System.Threading.Tasks.Task<Formulario.SWParticipante.buscarParticipanteResponse> buscarParticipanteAsync(int arg0) {
-            Formulario.SWParticipante.buscarParticipanteRequest inValue = new Formulario.SWParticipante.buscarParticipanteRequest();
-            inValue.arg0 = arg0;
-            return ((Formulario.SWParticipante.SWParticipante)(this)).buscarParticipanteAsync(inValue);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        Formulario.SWParticipante.listarPartidosDeUnParticipanteResponse Formulario.SWParticipante.SWParticipante.listarPartidosDeUnParticipante(Formulario.SWParticipante.listarPartidosDeUnParticipanteRequest request) {
-            return base.Channel.listarPartidosDeUnParticipante(request);
-        }
-        
-        public Formulario.SWParticipante.partido[] listarPartidosDeUnParticipante(int arg0) {
-            Formulario.SWParticipante.listarPartidosDeUnParticipanteRequest inValue = new Formulario.SWParticipante.listarPartidosDeUnParticipanteRequest();
-            inValue.arg0 = arg0;
-            Formulario.SWParticipante.listarPartidosDeUnParticipanteResponse retVal = ((Formulario.SWParticipante.SWParticipante)(this)).listarPartidosDeUnParticipante(inValue);
-            return retVal.@return;
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<Formulario.SWParticipante.listarPartidosDeUnParticipanteResponse> Formulario.SWParticipante.SWParticipante.listarPartidosDeUnParticipanteAsync(Formulario.SWParticipante.listarPartidosDeUnParticipanteRequest request) {
-            return base.Channel.listarPartidosDeUnParticipanteAsync(request);
-        }
-        
-        public System.Threading.Tasks.Task<Formulario.SWParticipante.listarPartidosDeUnParticipanteResponse> listarPartidosDeUnParticipanteAsync(int arg0) {
-            Formulario.SWParticipante.listarPartidosDeUnParticipanteRequest inValue = new Formulario.SWParticipante.listarPartidosDeUnParticipanteRequest();
-            inValue.arg0 = arg0;
-            return ((Formulario.SWParticipante.SWParticipante)(this)).listarPartidosDeUnParticipanteAsync(inValue);
         }
     }
 }

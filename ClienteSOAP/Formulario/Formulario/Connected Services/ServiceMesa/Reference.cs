@@ -12,80 +12,56 @@ namespace Formulario.ServiceMesa {
     
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ServiceModel.ServiceContractAttribute(Namespace="http://serviciosWeb/", ConfigurationName="ServiceMesa.ServicioWebMesa")]
-    public interface ServicioWebMesa {
+    [System.ServiceModel.ServiceContractAttribute(Namespace="http://ws/", ConfigurationName="ServiceMesa.SWmesa")]
+    public interface SWmesa {
         
         // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://serviciosWeb/ServicioWebMesa/actualizarMesaRequest", ReplyAction="http://serviciosWeb/ServicioWebMesa/actualizarMesaResponse")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        Formulario.ServiceMesa.actualizarMesaResponse actualizarMesa(Formulario.ServiceMesa.actualizarMesaRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://serviciosWeb/ServicioWebMesa/actualizarMesaRequest", ReplyAction="http://serviciosWeb/ServicioWebMesa/actualizarMesaResponse")]
-        System.Threading.Tasks.Task<Formulario.ServiceMesa.actualizarMesaResponse> actualizarMesaAsync(Formulario.ServiceMesa.actualizarMesaRequest request);
-        
-        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://serviciosWeb/ServicioWebMesa/eliminarMesaRequest", ReplyAction="http://serviciosWeb/ServicioWebMesa/eliminarMesaResponse")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        Formulario.ServiceMesa.eliminarMesaResponse eliminarMesa(Formulario.ServiceMesa.eliminarMesaRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://serviciosWeb/ServicioWebMesa/eliminarMesaRequest", ReplyAction="http://serviciosWeb/ServicioWebMesa/eliminarMesaResponse")]
-        System.Threading.Tasks.Task<Formulario.ServiceMesa.eliminarMesaResponse> eliminarMesaAsync(Formulario.ServiceMesa.eliminarMesaRequest request);
-        
-        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://serviciosWeb/ServicioWebMesa/listarMesasRequest", ReplyAction="http://serviciosWeb/ServicioWebMesa/listarMesasResponse")]
+        [System.ServiceModel.OperationContractAttribute(Action="http://ws/SWmesa/listarMesasRequest", ReplyAction="http://ws/SWmesa/listarMesasResponse")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
         [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
         Formulario.ServiceMesa.listarMesasResponse listarMesas(Formulario.ServiceMesa.listarMesasRequest request);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://serviciosWeb/ServicioWebMesa/listarMesasRequest", ReplyAction="http://serviciosWeb/ServicioWebMesa/listarMesasResponse")]
+        [System.ServiceModel.OperationContractAttribute(Action="http://ws/SWmesa/listarMesasRequest", ReplyAction="http://ws/SWmesa/listarMesasResponse")]
         System.Threading.Tasks.Task<Formulario.ServiceMesa.listarMesasResponse> listarMesasAsync(Formulario.ServiceMesa.listarMesasRequest request);
-        
-        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://serviciosWeb/ServicioWebMesa/buscarMesaRequest", ReplyAction="http://serviciosWeb/ServicioWebMesa/buscarMesaResponse")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        Formulario.ServiceMesa.buscarMesaResponse buscarMesa(Formulario.ServiceMesa.buscarMesaRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://serviciosWeb/ServicioWebMesa/buscarMesaRequest", ReplyAction="http://serviciosWeb/ServicioWebMesa/buscarMesaResponse")]
-        System.Threading.Tasks.Task<Formulario.ServiceMesa.buscarMesaResponse> buscarMesaAsync(Formulario.ServiceMesa.buscarMesaRequest request);
-        
-        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://serviciosWeb/ServicioWebMesa/crearMesaRequest", ReplyAction="http://serviciosWeb/ServicioWebMesa/crearMesaResponse")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        Formulario.ServiceMesa.crearMesaResponse crearMesa(Formulario.ServiceMesa.crearMesaRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://serviciosWeb/ServicioWebMesa/crearMesaRequest", ReplyAction="http://serviciosWeb/ServicioWebMesa/crearMesaResponse")]
-        System.Threading.Tasks.Task<Formulario.ServiceMesa.crearMesaResponse> crearMesaAsync(Formulario.ServiceMesa.crearMesaRequest request);
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4161.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://serviciosWeb/")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ws/")]
     public partial class mesa : object, System.ComponentModel.INotifyPropertyChanged {
         
-        private int id_mesaField;
+        private int idMesaField;
+        
+        private bool idMesaFieldSpecified;
         
         private string localidadField;
         
-        private string nombre_lugarField;
-        
-        private partido[] partidoList2Field;
+        private string nombreLugarField;
         
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=0)]
-        public int id_mesa {
+        public int idMesa {
             get {
-                return this.id_mesaField;
+                return this.idMesaField;
             }
             set {
-                this.id_mesaField = value;
-                this.RaisePropertyChanged("id_mesa");
+                this.idMesaField = value;
+                this.RaisePropertyChanged("idMesa");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool idMesaSpecified {
+            get {
+                return this.idMesaFieldSpecified;
+            }
+            set {
+                this.idMesaFieldSpecified = value;
+                this.RaisePropertyChanged("idMesaSpecified");
             }
         }
         
@@ -103,341 +79,13 @@ namespace Formulario.ServiceMesa {
         
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=2)]
-        public string nombre_lugar {
+        public string nombreLugar {
             get {
-                return this.nombre_lugarField;
+                return this.nombreLugarField;
             }
             set {
-                this.nombre_lugarField = value;
-                this.RaisePropertyChanged("nombre_lugar");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute("partidoList2", Form=System.Xml.Schema.XmlSchemaForm.Unqualified, IsNullable=true, Order=3)]
-        public partido[] partidoList2 {
-            get {
-                return this.partidoList2Field;
-            }
-            set {
-                this.partidoList2Field = value;
-                this.RaisePropertyChanged("partidoList2");
-            }
-        }
-        
-        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
-        
-        protected void RaisePropertyChanged(string propertyName) {
-            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
-            if ((propertyChanged != null)) {
-                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://serviciosWeb/")]
-    public partial class partido : object, System.ComponentModel.INotifyPropertyChanged {
-        
-        private System.DateTime fecha_programadaField;
-        
-        private bool fecha_programadaFieldSpecified;
-        
-        private int ganadorField;
-        
-        private System.DateTime hora_finField;
-        
-        private bool hora_finFieldSpecified;
-        
-        private System.DateTime hora_inicioField;
-        
-        private bool hora_inicioFieldSpecified;
-        
-        private mesa mesaField;
-        
-        private participante participanteField;
-        
-        private participante participante1Field;
-        
-        private int rondaField;
-        
-        private string torneoField;
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=0)]
-        public System.DateTime fecha_programada {
-            get {
-                return this.fecha_programadaField;
-            }
-            set {
-                this.fecha_programadaField = value;
-                this.RaisePropertyChanged("fecha_programada");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlIgnoreAttribute()]
-        public bool fecha_programadaSpecified {
-            get {
-                return this.fecha_programadaFieldSpecified;
-            }
-            set {
-                this.fecha_programadaFieldSpecified = value;
-                this.RaisePropertyChanged("fecha_programadaSpecified");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=1)]
-        public int ganador {
-            get {
-                return this.ganadorField;
-            }
-            set {
-                this.ganadorField = value;
-                this.RaisePropertyChanged("ganador");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=2)]
-        public System.DateTime hora_fin {
-            get {
-                return this.hora_finField;
-            }
-            set {
-                this.hora_finField = value;
-                this.RaisePropertyChanged("hora_fin");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlIgnoreAttribute()]
-        public bool hora_finSpecified {
-            get {
-                return this.hora_finFieldSpecified;
-            }
-            set {
-                this.hora_finFieldSpecified = value;
-                this.RaisePropertyChanged("hora_finSpecified");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=3)]
-        public System.DateTime hora_inicio {
-            get {
-                return this.hora_inicioField;
-            }
-            set {
-                this.hora_inicioField = value;
-                this.RaisePropertyChanged("hora_inicio");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlIgnoreAttribute()]
-        public bool hora_inicioSpecified {
-            get {
-                return this.hora_inicioFieldSpecified;
-            }
-            set {
-                this.hora_inicioFieldSpecified = value;
-                this.RaisePropertyChanged("hora_inicioSpecified");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=4)]
-        public mesa mesa {
-            get {
-                return this.mesaField;
-            }
-            set {
-                this.mesaField = value;
-                this.RaisePropertyChanged("mesa");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=5)]
-        public participante participante {
-            get {
-                return this.participanteField;
-            }
-            set {
-                this.participanteField = value;
-                this.RaisePropertyChanged("participante");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=6)]
-        public participante participante1 {
-            get {
-                return this.participante1Field;
-            }
-            set {
-                this.participante1Field = value;
-                this.RaisePropertyChanged("participante1");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=7)]
-        public int ronda {
-            get {
-                return this.rondaField;
-            }
-            set {
-                this.rondaField = value;
-                this.RaisePropertyChanged("ronda");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=8)]
-        public string torneo {
-            get {
-                return this.torneoField;
-            }
-            set {
-                this.torneoField = value;
-                this.RaisePropertyChanged("torneo");
-            }
-        }
-        
-        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
-        
-        protected void RaisePropertyChanged(string propertyName) {
-            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
-            if ((propertyChanged != null)) {
-                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://serviciosWeb/")]
-    public partial class participante : object, System.ComponentModel.INotifyPropertyChanged {
-        
-        private string apodoField;
-        
-        private System.DateTime fecha_caducidadField;
-        
-        private bool fecha_caducidadFieldSpecified;
-        
-        private System.DateTime fecha_inscripcionField;
-        
-        private bool fecha_inscripcionFieldSpecified;
-        
-        private int idField;
-        
-        private partido[] partidoListField;
-        
-        private partido[] partidoList1Field;
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=0)]
-        public string apodo {
-            get {
-                return this.apodoField;
-            }
-            set {
-                this.apodoField = value;
-                this.RaisePropertyChanged("apodo");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=1)]
-        public System.DateTime fecha_caducidad {
-            get {
-                return this.fecha_caducidadField;
-            }
-            set {
-                this.fecha_caducidadField = value;
-                this.RaisePropertyChanged("fecha_caducidad");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlIgnoreAttribute()]
-        public bool fecha_caducidadSpecified {
-            get {
-                return this.fecha_caducidadFieldSpecified;
-            }
-            set {
-                this.fecha_caducidadFieldSpecified = value;
-                this.RaisePropertyChanged("fecha_caducidadSpecified");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=2)]
-        public System.DateTime fecha_inscripcion {
-            get {
-                return this.fecha_inscripcionField;
-            }
-            set {
-                this.fecha_inscripcionField = value;
-                this.RaisePropertyChanged("fecha_inscripcion");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlIgnoreAttribute()]
-        public bool fecha_inscripcionSpecified {
-            get {
-                return this.fecha_inscripcionFieldSpecified;
-            }
-            set {
-                this.fecha_inscripcionFieldSpecified = value;
-                this.RaisePropertyChanged("fecha_inscripcionSpecified");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=3)]
-        public int id {
-            get {
-                return this.idField;
-            }
-            set {
-                this.idField = value;
-                this.RaisePropertyChanged("id");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute("partidoList", Form=System.Xml.Schema.XmlSchemaForm.Unqualified, IsNullable=true, Order=4)]
-        public partido[] partidoList {
-            get {
-                return this.partidoListField;
-            }
-            set {
-                this.partidoListField = value;
-                this.RaisePropertyChanged("partidoList");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute("partidoList1", Form=System.Xml.Schema.XmlSchemaForm.Unqualified, IsNullable=true, Order=5)]
-        public partido[] partidoList1 {
-            get {
-                return this.partidoList1Field;
-            }
-            set {
-                this.partidoList1Field = value;
-                this.RaisePropertyChanged("partidoList1");
+                this.nombreLugarField = value;
+                this.RaisePropertyChanged("nombreLugar");
             }
         }
         
@@ -454,79 +102,7 @@ namespace Formulario.ServiceMesa {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="actualizarMesa", WrapperNamespace="http://serviciosWeb/", IsWrapped=true)]
-    public partial class actualizarMesaRequest {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://serviciosWeb/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public Formulario.ServiceMesa.mesa arg0;
-        
-        public actualizarMesaRequest() {
-        }
-        
-        public actualizarMesaRequest(Formulario.ServiceMesa.mesa arg0) {
-            this.arg0 = arg0;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="actualizarMesaResponse", WrapperNamespace="http://serviciosWeb/", IsWrapped=true)]
-    public partial class actualizarMesaResponse {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://serviciosWeb/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public int @return;
-        
-        public actualizarMesaResponse() {
-        }
-        
-        public actualizarMesaResponse(int @return) {
-            this.@return = @return;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="eliminarMesa", WrapperNamespace="http://serviciosWeb/", IsWrapped=true)]
-    public partial class eliminarMesaRequest {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://serviciosWeb/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public Formulario.ServiceMesa.mesa arg0;
-        
-        public eliminarMesaRequest() {
-        }
-        
-        public eliminarMesaRequest(Formulario.ServiceMesa.mesa arg0) {
-            this.arg0 = arg0;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="eliminarMesaResponse", WrapperNamespace="http://serviciosWeb/", IsWrapped=true)]
-    public partial class eliminarMesaResponse {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://serviciosWeb/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public int @return;
-        
-        public eliminarMesaResponse() {
-        }
-        
-        public eliminarMesaResponse(int @return) {
-            this.@return = @return;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="listarMesas", WrapperNamespace="http://serviciosWeb/", IsWrapped=true)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="listarMesas", WrapperNamespace="http://ws/", IsWrapped=true)]
     public partial class listarMesasRequest {
         
         public listarMesasRequest() {
@@ -536,10 +112,10 @@ namespace Formulario.ServiceMesa {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="listarMesasResponse", WrapperNamespace="http://serviciosWeb/", IsWrapped=true)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="listarMesasResponse", WrapperNamespace="http://ws/", IsWrapped=true)]
     public partial class listarMesasResponse {
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://serviciosWeb/", Order=0)]
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws/", Order=0)]
         [System.Xml.Serialization.XmlElementAttribute("return", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
         public Formulario.ServiceMesa.mesa[] @return;
         
@@ -551,216 +127,52 @@ namespace Formulario.ServiceMesa {
         }
     }
     
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="buscarMesa", WrapperNamespace="http://serviciosWeb/", IsWrapped=true)]
-    public partial class buscarMesaRequest {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://serviciosWeb/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public Formulario.ServiceMesa.mesa arg0;
-        
-        public buscarMesaRequest() {
-        }
-        
-        public buscarMesaRequest(Formulario.ServiceMesa.mesa arg0) {
-            this.arg0 = arg0;
-        }
+    public interface SWmesaChannel : Formulario.ServiceMesa.SWmesa, System.ServiceModel.IClientChannel {
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="buscarMesaResponse", WrapperNamespace="http://serviciosWeb/", IsWrapped=true)]
-    public partial class buscarMesaResponse {
+    public partial class SWmesaClient : System.ServiceModel.ClientBase<Formulario.ServiceMesa.SWmesa>, Formulario.ServiceMesa.SWmesa {
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://serviciosWeb/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public Formulario.ServiceMesa.mesa @return;
-        
-        public buscarMesaResponse() {
+        public SWmesaClient() {
         }
         
-        public buscarMesaResponse(Formulario.ServiceMesa.mesa @return) {
-            this.@return = @return;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="crearMesa", WrapperNamespace="http://serviciosWeb/", IsWrapped=true)]
-    public partial class crearMesaRequest {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://serviciosWeb/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public Formulario.ServiceMesa.mesa arg0;
-        
-        public crearMesaRequest() {
-        }
-        
-        public crearMesaRequest(Formulario.ServiceMesa.mesa arg0) {
-            this.arg0 = arg0;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="crearMesaResponse", WrapperNamespace="http://serviciosWeb/", IsWrapped=true)]
-    public partial class crearMesaResponse {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://serviciosWeb/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public int @return;
-        
-        public crearMesaResponse() {
-        }
-        
-        public crearMesaResponse(int @return) {
-            this.@return = @return;
-        }
-    }
-    
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    public interface ServicioWebMesaChannel : Formulario.ServiceMesa.ServicioWebMesa, System.ServiceModel.IClientChannel {
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    public partial class ServicioWebMesaClient : System.ServiceModel.ClientBase<Formulario.ServiceMesa.ServicioWebMesa>, Formulario.ServiceMesa.ServicioWebMesa {
-        
-        public ServicioWebMesaClient() {
-        }
-        
-        public ServicioWebMesaClient(string endpointConfigurationName) : 
+        public SWmesaClient(string endpointConfigurationName) : 
                 base(endpointConfigurationName) {
         }
         
-        public ServicioWebMesaClient(string endpointConfigurationName, string remoteAddress) : 
+        public SWmesaClient(string endpointConfigurationName, string remoteAddress) : 
                 base(endpointConfigurationName, remoteAddress) {
         }
         
-        public ServicioWebMesaClient(string endpointConfigurationName, System.ServiceModel.EndpointAddress remoteAddress) : 
+        public SWmesaClient(string endpointConfigurationName, System.ServiceModel.EndpointAddress remoteAddress) : 
                 base(endpointConfigurationName, remoteAddress) {
         }
         
-        public ServicioWebMesaClient(System.ServiceModel.Channels.Binding binding, System.ServiceModel.EndpointAddress remoteAddress) : 
+        public SWmesaClient(System.ServiceModel.Channels.Binding binding, System.ServiceModel.EndpointAddress remoteAddress) : 
                 base(binding, remoteAddress) {
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        Formulario.ServiceMesa.actualizarMesaResponse Formulario.ServiceMesa.ServicioWebMesa.actualizarMesa(Formulario.ServiceMesa.actualizarMesaRequest request) {
-            return base.Channel.actualizarMesa(request);
-        }
-        
-        public int actualizarMesa(Formulario.ServiceMesa.mesa arg0) {
-            Formulario.ServiceMesa.actualizarMesaRequest inValue = new Formulario.ServiceMesa.actualizarMesaRequest();
-            inValue.arg0 = arg0;
-            Formulario.ServiceMesa.actualizarMesaResponse retVal = ((Formulario.ServiceMesa.ServicioWebMesa)(this)).actualizarMesa(inValue);
-            return retVal.@return;
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<Formulario.ServiceMesa.actualizarMesaResponse> Formulario.ServiceMesa.ServicioWebMesa.actualizarMesaAsync(Formulario.ServiceMesa.actualizarMesaRequest request) {
-            return base.Channel.actualizarMesaAsync(request);
-        }
-        
-        public System.Threading.Tasks.Task<Formulario.ServiceMesa.actualizarMesaResponse> actualizarMesaAsync(Formulario.ServiceMesa.mesa arg0) {
-            Formulario.ServiceMesa.actualizarMesaRequest inValue = new Formulario.ServiceMesa.actualizarMesaRequest();
-            inValue.arg0 = arg0;
-            return ((Formulario.ServiceMesa.ServicioWebMesa)(this)).actualizarMesaAsync(inValue);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        Formulario.ServiceMesa.eliminarMesaResponse Formulario.ServiceMesa.ServicioWebMesa.eliminarMesa(Formulario.ServiceMesa.eliminarMesaRequest request) {
-            return base.Channel.eliminarMesa(request);
-        }
-        
-        public int eliminarMesa(Formulario.ServiceMesa.mesa arg0) {
-            Formulario.ServiceMesa.eliminarMesaRequest inValue = new Formulario.ServiceMesa.eliminarMesaRequest();
-            inValue.arg0 = arg0;
-            Formulario.ServiceMesa.eliminarMesaResponse retVal = ((Formulario.ServiceMesa.ServicioWebMesa)(this)).eliminarMesa(inValue);
-            return retVal.@return;
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<Formulario.ServiceMesa.eliminarMesaResponse> Formulario.ServiceMesa.ServicioWebMesa.eliminarMesaAsync(Formulario.ServiceMesa.eliminarMesaRequest request) {
-            return base.Channel.eliminarMesaAsync(request);
-        }
-        
-        public System.Threading.Tasks.Task<Formulario.ServiceMesa.eliminarMesaResponse> eliminarMesaAsync(Formulario.ServiceMesa.mesa arg0) {
-            Formulario.ServiceMesa.eliminarMesaRequest inValue = new Formulario.ServiceMesa.eliminarMesaRequest();
-            inValue.arg0 = arg0;
-            return ((Formulario.ServiceMesa.ServicioWebMesa)(this)).eliminarMesaAsync(inValue);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        Formulario.ServiceMesa.listarMesasResponse Formulario.ServiceMesa.ServicioWebMesa.listarMesas(Formulario.ServiceMesa.listarMesasRequest request) {
+        Formulario.ServiceMesa.listarMesasResponse Formulario.ServiceMesa.SWmesa.listarMesas(Formulario.ServiceMesa.listarMesasRequest request) {
             return base.Channel.listarMesas(request);
         }
         
         public Formulario.ServiceMesa.mesa[] listarMesas() {
             Formulario.ServiceMesa.listarMesasRequest inValue = new Formulario.ServiceMesa.listarMesasRequest();
-            Formulario.ServiceMesa.listarMesasResponse retVal = ((Formulario.ServiceMesa.ServicioWebMesa)(this)).listarMesas(inValue);
+            Formulario.ServiceMesa.listarMesasResponse retVal = ((Formulario.ServiceMesa.SWmesa)(this)).listarMesas(inValue);
             return retVal.@return;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<Formulario.ServiceMesa.listarMesasResponse> Formulario.ServiceMesa.ServicioWebMesa.listarMesasAsync(Formulario.ServiceMesa.listarMesasRequest request) {
+        System.Threading.Tasks.Task<Formulario.ServiceMesa.listarMesasResponse> Formulario.ServiceMesa.SWmesa.listarMesasAsync(Formulario.ServiceMesa.listarMesasRequest request) {
             return base.Channel.listarMesasAsync(request);
         }
         
         public System.Threading.Tasks.Task<Formulario.ServiceMesa.listarMesasResponse> listarMesasAsync() {
             Formulario.ServiceMesa.listarMesasRequest inValue = new Formulario.ServiceMesa.listarMesasRequest();
-            return ((Formulario.ServiceMesa.ServicioWebMesa)(this)).listarMesasAsync(inValue);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        Formulario.ServiceMesa.buscarMesaResponse Formulario.ServiceMesa.ServicioWebMesa.buscarMesa(Formulario.ServiceMesa.buscarMesaRequest request) {
-            return base.Channel.buscarMesa(request);
-        }
-        
-        public Formulario.ServiceMesa.mesa buscarMesa(Formulario.ServiceMesa.mesa arg0) {
-            Formulario.ServiceMesa.buscarMesaRequest inValue = new Formulario.ServiceMesa.buscarMesaRequest();
-            inValue.arg0 = arg0;
-            Formulario.ServiceMesa.buscarMesaResponse retVal = ((Formulario.ServiceMesa.ServicioWebMesa)(this)).buscarMesa(inValue);
-            return retVal.@return;
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<Formulario.ServiceMesa.buscarMesaResponse> Formulario.ServiceMesa.ServicioWebMesa.buscarMesaAsync(Formulario.ServiceMesa.buscarMesaRequest request) {
-            return base.Channel.buscarMesaAsync(request);
-        }
-        
-        public System.Threading.Tasks.Task<Formulario.ServiceMesa.buscarMesaResponse> buscarMesaAsync(Formulario.ServiceMesa.mesa arg0) {
-            Formulario.ServiceMesa.buscarMesaRequest inValue = new Formulario.ServiceMesa.buscarMesaRequest();
-            inValue.arg0 = arg0;
-            return ((Formulario.ServiceMesa.ServicioWebMesa)(this)).buscarMesaAsync(inValue);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        Formulario.ServiceMesa.crearMesaResponse Formulario.ServiceMesa.ServicioWebMesa.crearMesa(Formulario.ServiceMesa.crearMesaRequest request) {
-            return base.Channel.crearMesa(request);
-        }
-        
-        public int crearMesa(Formulario.ServiceMesa.mesa arg0) {
-            Formulario.ServiceMesa.crearMesaRequest inValue = new Formulario.ServiceMesa.crearMesaRequest();
-            inValue.arg0 = arg0;
-            Formulario.ServiceMesa.crearMesaResponse retVal = ((Formulario.ServiceMesa.ServicioWebMesa)(this)).crearMesa(inValue);
-            return retVal.@return;
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<Formulario.ServiceMesa.crearMesaResponse> Formulario.ServiceMesa.ServicioWebMesa.crearMesaAsync(Formulario.ServiceMesa.crearMesaRequest request) {
-            return base.Channel.crearMesaAsync(request);
-        }
-        
-        public System.Threading.Tasks.Task<Formulario.ServiceMesa.crearMesaResponse> crearMesaAsync(Formulario.ServiceMesa.mesa arg0) {
-            Formulario.ServiceMesa.crearMesaRequest inValue = new Formulario.ServiceMesa.crearMesaRequest();
-            inValue.arg0 = arg0;
-            return ((Formulario.ServiceMesa.ServicioWebMesa)(this)).crearMesaAsync(inValue);
+            return ((Formulario.ServiceMesa.SWmesa)(this)).listarMesasAsync(inValue);
         }
     }
 }
