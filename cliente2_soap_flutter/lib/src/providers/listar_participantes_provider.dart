@@ -2,9 +2,7 @@ import 'dart:convert';
 import 'dart:developer';
 
 import 'package:cliente2_soap_flutter/models/participante.dart';
-import 'package:cliente2_soap_flutter/src/pages/home_page.dart';
 import 'package:http/http.dart' as http;
-import 'package:xml/xml.dart' as xml;
 import 'package:xml2json/xml2json.dart';
 
 class listar_participantes_provider {

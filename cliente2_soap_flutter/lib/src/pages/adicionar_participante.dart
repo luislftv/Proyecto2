@@ -1,10 +1,12 @@
 import 'dart:ui';
+import 'package:cliente2_soap_flutter/src/providers/Adicionar_participante_provider.dart';
 import 'package:flutter/material.dart';
 
 var fecha = 'Selecciona la fecha';
 var fecha1;
 DateTime ayer = DateTime.now().subtract(const Duration(days: 1));
-String gUsuario;
+String gUsuarioApodo;
+int gUsuarioId;
 
 class AdicionarParticipante extends StatefulWidget {
   AdicionarParticipante({Key key}) : super(key: key);
@@ -168,7 +170,7 @@ class IdParticipante extends StatelessWidget {
           child: TextField(
             controller: _controller,
             onChanged: (String value) {
-              gUsuario = value;
+              gUsuarioId = int.parse(value);
             },
             autofocus: false,
             textCapitalization: TextCapitalization.characters,
@@ -217,7 +219,7 @@ class ApodoParticipante extends StatelessWidget {
           child: TextField(
             controller: _controller,
             onChanged: (String value) {
-              gUsuario = value;
+              gUsuarioApodo = value;
             },
             autofocus: false,
             textCapitalization: TextCapitalization.characters,
@@ -272,13 +274,10 @@ class BotonAdicionarParticipante extends StatelessWidget {
           ),
           //),
           style: iconButtonStyle,
-          onPressed: () {
-            /*async {
-                //uiProvider.estadoDeBusqueda = 0;
+          onPressed: () async {
+            await Adicionar_participantes_provider().adicionar();
 
-                try {
-                  await futureUsuario();
-                  //if (gNombre.length > 1) {*/
+            //if (gNombre.length > 1) {*/
             Navigator.pushNamedAndRemoveUntil(context, '/', (route) => false);
             //}
           } /*on Exception catch (e) {
