@@ -22,7 +22,10 @@ class _ListarParticipantes extends State<ListarParticipantes> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Container(
+      appBar: AppBar(
+        title: Text('Listar Participantes'),
+      ),
+      body: Center(
         child: FutureBuilder(
             future: mapa,
             builder: (BuildContext context,

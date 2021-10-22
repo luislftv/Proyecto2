@@ -2,8 +2,10 @@ import 'dart:convert';
 import 'dart:developer';
 
 import 'package:cliente2_soap_flutter/models/participante.dart';
+import 'package:cliente2_soap_flutter/src/pages/home_page.dart';
 import 'package:http/http.dart' as http;
 import 'package:xml/xml.dart' as xml;
+import 'package:xml2json/xml2json.dart';
 
 class listar_participantes_provider {
   final _uri =
@@ -29,16 +31,24 @@ class listar_participantes_provider {
     );
 
     if (resp.statusCode == 200) {
+      final Xml2Json xml2Json = Xml2Json();
+
       final responseBody = resp.body;
 
-      final parseXml = xml.XmlDocument.parse(responseBody).innerXml;
+      xml2Json.parse(responseBody);
 
-      final decodejson = jsonDecode(parseXml) as List;
+      final jsonString = xml2Json.toParker();
 
-      List<ParticipanteModel> data =
-          decodejson.map((e) => ParticipanteModel.fromJson(e)).toList();
+      final asd = jsonString.substring(62, jsonString.length - 3);
 
-      return data;
+      final decodejson = jsonDecode(asd);
+
+      List<dynamic> data = decodejson["return"];
+
+      List<ParticipanteModel> respuesta =
+          data.map((e) => new ParticipanteModel.fromJson(e)).toList();
+
+      return respuesta;
     } else {
       log('Error: no se pudo conectar al ws');
       throw Exception("No se pudo conectar");

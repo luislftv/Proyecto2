@@ -26,7 +26,7 @@ class ParticipanteModel {
 
   factory ParticipanteModel.fromJson(Map<String, dynamic> json) =>
       ParticipanteModel(
-        id: json["id"],
+        id: int.parse(json["id"]),
         apodo: json["apodo"],
         fechaInscripcion: DateTime.parse(json["fechaInscripcion"]),
         fechaCaducidad: DateTime.parse(json["fechaCaducidad"]),
