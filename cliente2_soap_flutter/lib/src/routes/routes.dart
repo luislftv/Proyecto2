@@ -22,7 +22,7 @@ Map<String, WidgetBuilder> getApplicationRoutes() {
     'EliminarP': (BuildContext context) => EliminarPartido(),
     'Actualizar': (BuildContext context) => ActualizarParticipante(),
     'ActualizarP': (BuildContext context) => ActualizarPartido(),
-    'Listar': (BuildContext context) => AnimatedContainerPage(),
+    'Listar': (BuildContext context) => ListarParticipantes(),
     'Consultar': (BuildContext context) => ConsultarParticipante(),
     'ConsultarP': (BuildContext context) => ConsultarPartido(),
     'Gráfico': (BuildContext context) => SliderPage(),

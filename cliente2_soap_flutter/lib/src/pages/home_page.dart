@@ -1,4 +1,3 @@
-import 'package:cliente2_soap_flutter/src/pages/adicionar_participante.dart';
 import 'package:cliente2_soap_flutter/src/providers/menu_provider.dart';
 import 'package:cliente2_soap_flutter/src/utils/icono_string_util.dart';
 import 'package:flutter/material.dart';

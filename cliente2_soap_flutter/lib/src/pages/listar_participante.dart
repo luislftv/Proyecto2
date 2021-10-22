@@ -1,52 +1,55 @@
-import 'dart:math';
+import 'dart:ffi';
 
+import 'package:cliente2_soap_flutter/models/participante.dart';
+import 'package:cliente2_soap_flutter/src/providers/listar_participantes_provider.dart';
 import 'package:flutter/material.dart';
 
-class AnimatedContainerPage extends StatefulWidget {
+class ListarParticipantes extends StatefulWidget {
   @override
-  _AnimatedContainerPageState createState() => _AnimatedContainerPageState();
+  _ListarParticipantes createState() => _ListarParticipantes();
 }
 
-class _AnimatedContainerPageState extends State<AnimatedContainerPage> {
-  double _width = 50.0;
-  double _height = 50.0;
-  Color _color = Colors.pink;
+class _ListarParticipantes extends State<ListarParticipantes> {
+  final participanteProvider = listar_participantes_provider();
 
-  BorderRadiusGeometry _borderRadiusGeometry = BorderRadius.circular(8.0);
+  Future<List<ParticipanteModel>> mapa;
+
+  @override
+  Void initState() {
+    mapa = participanteProvider.getParticipantes();
+  }
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: Text('Animated Container'),
-      ),
-      body: Center(
-          child: AnimatedContainer(
-        duration: Duration(seconds: 1),
-        curve: Curves.fastOutSlowIn,
-        width: _width,
-        height: _height,
-        decoration: BoxDecoration(
-          borderRadius: _borderRadiusGeometry,
-          color: _color,
-        ),
-      )),
-      floatingActionButton: FloatingActionButton(
-        onPressed: _cambiarForma,
-        child: Icon(Icons.play_arrow),
+      body: Container(
+        child: FutureBuilder(
+            future: mapa,
+            builder: (BuildContext context,
+                AsyncSnapshot<List<ParticipanteModel>> snapshot) {
+              if (!snapshot.hasData) {
+                return Container(
+                  child: CircularProgressIndicator(),
+                );
+              } else {
+                final data = snapshot.data;
+                return ListView.builder(
+                    itemCount: data.length,
+                    itemBuilder: (context, index) {
+                      return Column(
+                        children: <Widget>[
+                          Text('id: ${data[index].id}'),
+                          Text('apodo: ${data[index].apodo}'),
+                          Text(
+                              'fechaInscripcion: ${data[index].fechaInscripcion}'),
+                          Text('fechaCaducidad${data[index].fechaCaducidad}'),
+                          Divider(),
+                        ],
+                      );
+                    });
+              }
+            }),
       ),
     );
-  }
-
-  void _cambiarForma() {
-    final random = Random();
-    setState(() {
-      _width = random.nextInt(300).toDouble();
-      _height = random.nextInt(300).toDouble();
-      _color = Color.fromRGBO(
-          random.nextInt(255), random.nextInt(255), random.nextInt(255), 1);
-      _borderRadiusGeometry =
-          BorderRadius.circular(random.nextInt(100).toDouble());
-    });
   }
 }

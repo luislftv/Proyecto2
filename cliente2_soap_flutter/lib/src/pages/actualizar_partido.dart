@@ -92,8 +92,8 @@ class _ActualizarPartidoState extends State<ActualizarPartido> {
                   locale: const Locale('es', 'ES'),
                   context: context,
                   initialDate: DateTime.now(),
-                  firstDate: ayer,
-                  lastDate: DateTime.now(),
+                  firstDate: DateTime(2010, 1, 1),
+                  lastDate: DateTime(2030, 12, 31),
                   useRootNavigator: false,
                 );
                 fecha1 = fecha1.toString();
