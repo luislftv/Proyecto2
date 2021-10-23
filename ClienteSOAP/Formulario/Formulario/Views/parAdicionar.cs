@@ -128,8 +128,16 @@ namespace Formulario
                 partido.torneo = textBox9.Text;
 
 
-
-                servicio.crearPartido(partido.mesa.idMesa, partido.participante.id, partido.participante1.id, partido.ganador, partido.ronda, partido.fechaProgramada, partido.horaInicio, partido.horaFin, partido.torneo);
+                int res;
+                res =  servicio.crearPartido(partido.mesa.idMesa, partido.participante.id, partido.participante1.id, partido.ganador, partido.ronda, partido.fechaProgramada, partido.horaInicio, partido.horaFin, partido.torneo);
+                if (res == 1)
+                {
+                    throw new Exception("No se pudo adicionar el partido en la base de datos");
+                }
+                else
+                {
+                    MessageBox.Show("Se ha podido adicionar el participante");
+                }
             }
             catch (Exception ex)
             {

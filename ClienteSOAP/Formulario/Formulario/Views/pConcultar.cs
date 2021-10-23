@@ -27,14 +27,24 @@ namespace Formulario
 
                 //p.id = Convert.ToInt32(textBox1.Text);
 
-                participante par = new participante(); ;
+                participante par = new participante(); 
 
                 par = servicio.buscarParticipante(Convert.ToInt32(textBox1.Text));
                 
+                if (par == null)
+                {
+                    throw new Exception("No existe el participante en la base de datos");
+                }
+                else
+                {
+                    MessageBox.Show("Se ha encontrado el participante");
+                }
+
                 textBox2.Text = par.apodo;
                 dateTimePicker1.Value = par.fechaInscripcion;
 
                 dateTimePicker2.Value = par.fechaCaducidad;
+                
             }
             catch (Exception ex)
             {

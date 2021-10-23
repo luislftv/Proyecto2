@@ -37,6 +37,15 @@ namespace Formulario
 
                 SWPartido.partido[] partidoE = new SWPartido.partido[1];
                 partidoE = servicio.listarPorId(mesa.idMesa, partici1.id, partici2.id);
+                if (partidoE == null)
+                {
+                    throw new Exception("No se encontro el partido deseado");
+
+                }
+                else
+                {
+                    MessageBox.Show("Se encontro el partido deseado");
+                }
 
 
                 textBox1.Text = Convert.ToString(partidoE[0].partidoPK.mesaId);
@@ -91,8 +100,16 @@ namespace Formulario
                 partido.torneo = textBox9.Text;
 
 
-
-                servicio.actualizarPartido(partido.mesa.idMesa, partido.participante.id, partido.participante1.id, partido.ganador, partido.ronda, partido.fechaProgramada, partido.horaInicio, partido.horaFin, partido.torneo);
+                int res;
+                res = servicio.actualizarPartido(partido.mesa.idMesa, partido.participante.id, partido.participante1.id, partido.ganador, partido.ronda, partido.fechaProgramada, partido.horaInicio, partido.horaFin, partido.torneo);
+                if (res == 1)
+                {
+                    throw new Exception("No se actualizo el partido en la base de datos");
+                }
+                else
+                {
+                    MessageBox.Show("Se ha actualizado el participante");
+                }
             }
             catch (Exception ex)
             {

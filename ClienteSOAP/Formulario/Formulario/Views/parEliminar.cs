@@ -36,7 +36,15 @@ namespace Formulario.Views
 
             SWPartido.partido[] partidoE = new SWPartido.partido[1];
             partidoE = servicio.listarPorId(mesa.idMesa, partici1.id, partici2.id);
+            if (partidoE == null)
+            {
+                throw new Exception("No se encontro el partido deseado");
 
+            }
+            else
+            {
+                MessageBox.Show("Se encontro el partido deseado");
+            }
 
             textBox1.Text = Convert.ToString(partidoE[0].partidoPK.mesaId);
             textBox2.Text = Convert.ToString(partidoE[0].partidoPK.parcipante1);
@@ -73,8 +81,17 @@ namespace Formulario.Views
             par.participante1 = par2;
 
 
-
-            servicio.eliminarPartido(par.mesa.idMesa, par.participante.id, par.participante1.id);
+            int res;
+            res = servicio.eliminarPartido(par.mesa.idMesa, par.participante.id, par.participante1.id);
+            
+            if (res == 1)
+            {
+                throw new Exception("No se pudo eliminar el partido en la base de datos");
+            }
+            else
+            {
+                MessageBox.Show("Se ha eliminado el partido");
+            }
         }
     }
 }

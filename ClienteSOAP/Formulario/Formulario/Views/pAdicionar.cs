@@ -43,7 +43,19 @@ namespace Formulario
                 participante.fechaCaducidad = dateTimePicker2.Value;
                 participante.fechaCaducidadSpecified = true;
 
-                servicio.crearParticipante(participante.id, participante.apodo, participante.fechaInscripcion, participante.fechaCaducidad);
+                int res;
+
+                res = servicio.crearParticipante(participante.id, participante.apodo, participante.fechaInscripcion, participante.fechaCaducidad);
+                
+                if (res == 0)
+                {
+                    MessageBox.Show("Se ha agregado con exito el participante");
+                }
+                else
+                {
+                    MessageBox.Show("No se puede agregar este participante");
+                }
+
             }
             catch (Exception ex)
             {

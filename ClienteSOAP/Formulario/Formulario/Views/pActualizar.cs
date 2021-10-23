@@ -28,6 +28,15 @@ namespace Formulario
                 p.id = Convert.ToInt32(textBox1.Text);
 
                 p = servicio.buscarParticipante(Convert.ToInt32(textBox1.Text));
+                
+                if (p == null)
+                {
+                    throw new Exception("No existe el participante en la base de datos");
+                }
+                else
+                {
+                    MessageBox.Show("Se ha encontrado el participante");
+                }
 
                 textBox2.Text = p.apodo;
                 dateTimePicker1.Value = p.fechaInscripcion;
@@ -56,8 +65,18 @@ namespace Formulario
                 participante.fechaInscripcionSpecified = true;
                 participante.fechaCaducidad = dateTimePicker2.Value;
                 participante.fechaCaducidadSpecified = true;
+                int res;
+                res = servicio.actualizarParticipante(participante.id,participante.apodo,participante.fechaInscripcion,participante.fechaCaducidad);
+               
+                if (res == 0)
+                {
+                    MessageBox.Show("Se ha modificado con exito el participante");
+                }
+                else
+                {
+                    throw new Exception("No se puede modificar este participante");
+                }
 
-                servicio.actualizarParticipante(participante.id,participante.apodo,participante.fechaInscripcion,participante.fechaCaducidad);
             }
             catch (Exception ex)
             {
