@@ -32,6 +32,12 @@ public class SWParticipante {
 
     @WebMethod
     public Integer crearParticipante(@WebParam(name = "arg0") Integer id, String apodo, Date fechaInscripcion, Date fechaCaducidad){
+        /*String k = apodo.charAt(0)+"";
+        
+        if (k.equals("'")) {
+            apodo = apodo.substring(1, apodo.length()-1);
+        }*/
+        
         try{
             System.out.println(id+" "+apodo+" "+fechaInscripcion+" "+fechaCaducidad);
             sp.crearParticipante(new Participante(id, apodo, fechaInscripcion, fechaCaducidad));

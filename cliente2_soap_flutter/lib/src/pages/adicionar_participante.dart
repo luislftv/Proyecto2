@@ -2,11 +2,13 @@ import 'dart:ui';
 import 'package:cliente2_soap_flutter/src/providers/Adicionar_participante_provider.dart';
 import 'package:flutter/material.dart';
 
-var fecha = 'Selecciona la fecha';
-var fecha1;
+DateTime fecha;
+DateTime fecha1;
 DateTime ayer = DateTime.now().subtract(const Duration(days: 1));
 String gUsuarioApodo;
 int gUsuarioId;
+DateTime gFechaInscripcion;
+DateTime gFechaCaducidad;
 
 class AdicionarParticipante extends StatefulWidget {
   AdicionarParticipante({Key key}) : super(key: key);
@@ -68,7 +70,7 @@ class _AdicionarParticipanteState extends State<AdicionarParticipante> {
           child: GestureDetector(
               child: Row(children: [
                 Text(
-                  '$fecha',
+                  '$fecha1',
                   style: TextStyle(
                       fontStyle: FontStyle.italic,
                       fontWeight: FontWeight.w400,
@@ -88,14 +90,14 @@ class _AdicionarParticipanteState extends State<AdicionarParticipante> {
                   lastDate: DateTime.now(),
                   useRootNavigator: false,
                 );
-                fecha1 = fecha1.toString();
+                /*fecha1 = fecha1.toString();
                 if (fecha1 != 'null') {
                   fecha = fecha1;
                   fecha = fecha.substring(0, 10).trim();
-                }
+                }*/
 
                 setState(() {});
-                print(fecha);
+                print(fecha1);
               }),
           margin: EdgeInsets.symmetric(horizontal: 35.0, vertical: 20),
         ),
@@ -131,7 +133,7 @@ class _AdicionarParticipanteState extends State<AdicionarParticipante> {
                 Icon(Icons.calendar_today_rounded)
               ]),
               onTap: () async {
-                fecha1 = await showDatePicker(
+                fecha = await showDatePicker(
                   locale: const Locale('es', 'ES'),
                   context: context,
                   initialDate: DateTime.now(),
@@ -139,11 +141,11 @@ class _AdicionarParticipanteState extends State<AdicionarParticipante> {
                   lastDate: DateTime.now(),
                   useRootNavigator: false,
                 );
-                fecha1 = fecha1.toString();
+                /*fecha1 = fecha1.toString();
                 if (fecha1 != 'null') {
                   fecha = fecha1;
                   fecha = fecha.substring(0, 10).trim();
-                }
+                }*/
 
                 setState(() {});
                 print(fecha);

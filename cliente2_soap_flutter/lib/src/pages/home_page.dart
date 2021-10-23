@@ -39,11 +39,13 @@ class _HomePageState extends State<HomePage> {
         title: Text('App Universidad'),
         centerTitle: true,
       ),
-      body: Center(
-        child: Column(
-          children: [
-            _widgetOptions.elementAt(_selectedIndex),
-          ],
+      body: SingleChildScrollView(
+        child: Center(
+          child: Column(
+            children: [
+              _widgetOptions.elementAt(_selectedIndex),
+            ],
+          ),
         ),
       ),
       bottomNavigationBar: BottomNavigationBar(
