@@ -6,7 +6,7 @@ DateTime fecha;
 DateTime fecha1;
 DateTime ayer = DateTime.now().subtract(const Duration(days: 1));
 String gUsuarioApodo;
-int gUsuarioId;
+String gUsuarioId;
 DateTime gFechaInscripcion;
 DateTime gFechaCaducidad;
 
@@ -86,15 +86,14 @@ class _AdicionarParticipanteState extends State<AdicionarParticipante> {
                   locale: const Locale('es', 'ES'),
                   context: context,
                   initialDate: DateTime.now(),
-                  firstDate: ayer,
-                  lastDate: DateTime.now(),
+                  firstDate: DateTime(2000, 01, 01),
+                  lastDate: DateTime(2030, 12, 31),
                   useRootNavigator: false,
                 );
-                /*fecha1 = fecha1.toString();
-                if (fecha1 != 'null') {
-                  fecha = fecha1;
-                  fecha = fecha.substring(0, 10).trim();
-                }*/
+
+                if (fecha1 == 'null') {
+                  fecha1 = DateTime.now();
+                }
 
                 setState(() {});
                 print(fecha1);
@@ -137,15 +136,14 @@ class _AdicionarParticipanteState extends State<AdicionarParticipante> {
                   locale: const Locale('es', 'ES'),
                   context: context,
                   initialDate: DateTime.now(),
-                  firstDate: ayer,
-                  lastDate: DateTime.now(),
+                  firstDate: DateTime(2000, 01, 01),
+                  lastDate: DateTime(2030, 12, 31),
                   useRootNavigator: false,
                 );
-                /*fecha1 = fecha1.toString();
-                if (fecha1 != 'null') {
-                  fecha = fecha1;
-                  fecha = fecha.substring(0, 10).trim();
-                }*/
+                //fecha1 = fecha1.toString();
+                if (fecha == 'null') {
+                  fecha = DateTime.now();
+                }
 
                 setState(() {});
                 print(fecha);
@@ -172,7 +170,7 @@ class IdParticipante extends StatelessWidget {
           child: TextField(
             controller: _controller,
             onChanged: (String value) {
-              gUsuarioId = int.parse(value);
+              gUsuarioId = value;
             },
             autofocus: false,
             textCapitalization: TextCapitalization.characters,
@@ -277,7 +275,7 @@ class BotonAdicionarParticipante extends StatelessWidget {
           //),
           style: iconButtonStyle,
           onPressed: () async {
-            await Adicionar_participantes_provider().adicionar();
+            await Adicionar_participantes_provider();
 
             //if (gNombre.length > 1) {*/
             Navigator.pushNamedAndRemoveUntil(context, '/', (route) => false);

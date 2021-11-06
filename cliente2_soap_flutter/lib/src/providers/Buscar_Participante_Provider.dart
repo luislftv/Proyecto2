@@ -2,10 +2,11 @@ import 'dart:convert';
 import 'dart:developer';
 
 import 'package:cliente2_soap_flutter/models/participante.dart';
+import 'package:cliente2_soap_flutter/src/pages/consultar_participante.dart';
 import 'package:http/http.dart' as http;
 import 'package:xml2json/xml2json.dart';
 
-class listar_participantes_provider {
+class buscar_participantes_provider {
   final _uri =
       Uri.parse("http://10.0.2.2:8080/ServidorSOAP/SWParticipante?wsdl");
 
@@ -15,16 +16,16 @@ class listar_participantes_provider {
    <soapenv:Body>
       <ws:buscarParticipante>
          <!--Optional:-->
-         <arg0>?</arg0>
+         <arg0>$gParticipanteBuscado</arg0>
       </ws:buscarParticipante>
    </soapenv:Body>
 </soapenv:Envelope>''';
 
-  listar_participantes_provider() {
-    this.getParticipantes();
+  buscar_participantes_provider() {
+    this.getParticipante();
   }
 
-  Future<List<ParticipanteModel>> getParticipantes() async {
+  Future<List<ParticipanteModel>> getParticipante() async {
     final resp = await http.post(
       _uri,
       headers: {"Content-Type": "text/xml; charset=utf-8", "SOAPAction": ""},
@@ -40,11 +41,17 @@ class listar_participantes_provider {
 
       final jsonString = xml2Json.toParker();
 
-      final asd = jsonString.substring(62, jsonString.length - 3);
+      final asd = jsonString.substring(61, jsonString.length - 3);
 
       final decodejson = jsonDecode(asd);
 
-      List<dynamic> data = decodejson["return"];
+      log(jsonString);
+
+      dynamic dataR = decodejson["return"];
+
+      List<dynamic> data = List.filled(1, dataR);
+
+      //data.add(dataR);
 
       List<ParticipanteModel> respuesta =
           data.map((e) => new ParticipanteModel.fromJson(e)).toList();

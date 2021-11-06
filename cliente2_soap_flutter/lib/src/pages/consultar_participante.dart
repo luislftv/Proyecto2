@@ -1,10 +1,14 @@
 import 'dart:ui';
+import 'package:cliente2_soap_flutter/models/participante.dart';
+import 'package:cliente2_soap_flutter/src/providers/Buscar_Participante_Provider.dart';
 import 'package:flutter/material.dart';
 
 var fecha = 'Selecciona la fecha';
 var fecha1;
 DateTime ayer = DateTime.now().subtract(const Duration(days: 1));
-String gUsuario;
+String gParticipanteBuscado;
+String fechai;
+Future<List<ParticipanteModel>> mapa;
 
 class ConsultarParticipante extends StatefulWidget {
   ConsultarParticipante({Key key}) : super(key: key);
@@ -42,7 +46,7 @@ class _ConsultarParticipanteState extends State<ConsultarParticipante> {
                   lecturaFechaIngreso(context),
                   lecturaFechaExpiracion(context),
                   Expanded(child: SizedBox()),
-                  BotonAdicionarParticipante()
+                  botonConsultarParticipante(context)
                 ],
               ),
             ),
@@ -151,6 +155,36 @@ class _ConsultarParticipanteState extends State<ConsultarParticipante> {
       ],
     );
   }
+
+  Widget botonConsultarParticipante(BuildContext context) {
+    return Container(
+      constraints: BoxConstraints(minWidth: double.infinity, minHeight: 60.0),
+      margin: EdgeInsets.symmetric(horizontal: 20.0, vertical: 20.0),
+      //color: Colors.red,
+
+      child: TextButton(
+          //child: Container(
+          child: Text(
+            'Consultar',
+            style: TextStyle(fontWeight: FontWeight.w600),
+            textScaleFactor: 1.6,
+          ),
+          //),
+          style: iconButtonStyle,
+          onPressed: () async {
+            mapa = buscar_participantes_provider().getParticipante();
+            await mapa;
+            //fechai = mapa;
+
+            setState(() {
+              fecha = "18";
+            });
+
+            //Navigator.pushNamedAndRemoveUntil(context, '/', (route) => false);
+            //}
+          }),
+    );
+  }
 }
 
 class IdParticipante extends StatelessWidget {
@@ -166,9 +200,10 @@ class IdParticipante extends StatelessWidget {
           constraints:
               BoxConstraints(maxWidth: 200, maxHeight: 60, minHeight: 60),
           child: TextField(
+            //enabled: false,
             controller: _controller,
             onChanged: (String value) {
-              gUsuario = value;
+              gParticipanteBuscado = value;
             },
             autofocus: false,
             textCapitalization: TextCapitalization.characters,
@@ -215,9 +250,10 @@ class ApodoParticipante extends StatelessWidget {
           constraints:
               BoxConstraints(maxWidth: 200, maxHeight: 60, minHeight: 60),
           child: TextField(
+            enabled: false,
             controller: _controller,
             onChanged: (String value) {
-              gUsuario = value;
+              value = ParticipanteModel().apodo;
             },
             autofocus: false,
             textCapitalization: TextCapitalization.characters,
@@ -245,91 +281,6 @@ class ApodoParticipante extends StatelessWidget {
           margin: EdgeInsets.symmetric(horizontal: 35.0, vertical: 20),
         ),
       ],
-    );
-  }
-}
-
-class BotonAdicionarParticipante extends StatelessWidget {
-  @override
-  Widget build(BuildContext context) {
-    //final uiProvider = Provider.of<UiProviders>(context);
-
-    //final currentIndex = uiProvider.estadoDeBusqueda;
-    //switch (currentIndex) {
-    //case 0:
-    //if (gUsuario.length > 1 && gPass.length > 1) {
-    return Container(
-      constraints: BoxConstraints(minWidth: double.infinity, minHeight: 60.0),
-      margin: EdgeInsets.symmetric(horizontal: 20.0, vertical: 20.0),
-      //color: Colors.red,
-
-      child: TextButton(
-          //child: Container(
-          child: Text(
-            'Consultar',
-            style: TextStyle(fontWeight: FontWeight.w600),
-            textScaleFactor: 1.6,
-          ),
-          //),
-          style: iconButtonStyle,
-          onPressed: () {
-            /*async {
-                //uiProvider.estadoDeBusqueda = 0;
-
-                try {
-                  await futureUsuario();
-                  //if (gNombre.length > 1) {*/
-            Navigator.pushNamedAndRemoveUntil(context, '/', (route) => false);
-            //}
-          } /*on Exception catch (e) {
-                  _credencialesIncorrectas(context);
-                  //rethrow;
-                }
-                /* if (usuario == gNombre && pass == gApellido) {
-                  Navigator.pushNamedAndRemoveUntil(
-                      context, 'registro', (route) => false);
-                } else {
-                  
-                }*/
-              },
-            ),
-          );
-        } else {
-          return Container(
-            constraints:
-                BoxConstraints(minWidth: double.infinity, minHeight: 60.0),
-            margin: EdgeInsets.symmetric(horizontal: 20.0, vertical: 20.0),
-            child: TextButton(
-              //child: Container(
-              child: Text(
-                'Confirmar',
-                style: TextStyle(fontWeight: FontWeight.w600),
-                textScaleFactor: 1.6,
-              ),
-              //),
-              style: inactivo,
-              onPressed: () {},
-            ),
-          );
-        }
-    }
-    return Container(
-      constraints: BoxConstraints(minWidth: double.infinity, minHeight: 60.0),
-      margin: EdgeInsets.symmetric(horizontal: 20.0, vertical: 20.0),
-      child: TextButton(
-        //child: Container(
-        child: Text(
-          'Confirmar',
-          style: TextStyle(fontWeight: FontWeight.w600),
-          textScaleFactor: 1.6,
-        ),
-        //),
-        style: inactivo,
-        onPressed: () {
-          //setState(() {
-          //Navigator.pushNamed(context, 'buscando');
-        },*/
-          ),
     );
   }
 }
